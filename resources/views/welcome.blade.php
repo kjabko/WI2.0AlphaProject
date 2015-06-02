@@ -10,7 +10,7 @@
 				padding: 0;
 				width: 100%;
 				height: 100%;
-				color: #B0BEC5;
+				color: #000;
 				display: table;
 				font-weight: 100;
 				font-family: 'Lato';
@@ -40,7 +40,7 @@
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Laravel 5</div>
+				<div class="title">Hello World</div>
 				<div class="quote">{{ Inspiring::quote() }}</div>
 			</div>
 		</div>
