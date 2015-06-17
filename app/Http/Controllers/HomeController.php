@@ -30,10 +30,8 @@ class HomeController extends Controller {
 
 	public function home()
 	{
-		$data = [];
-		$data = ['Apple'];
-		$data = ['Pear'];
+		$user = \Auth::user()->name;
 
-		return view('home')->with(compact('$data'));
+		return view('home')->with(compact('user'));
 	}
 }

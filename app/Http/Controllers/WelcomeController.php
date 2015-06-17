@@ -37,13 +37,13 @@ class WelcomeController extends Controller {
 		$origName = 'Dublin';
 		$destName = 'Berlin';
 		$uri = 'http://free.rome2rio.com/api/1.2/json/Search?key='.$key.'&oName='.$origName.'&dName='.$destName;
-
+		$myApi = 'http://localhost/codeigniter/index.php/api/jazz/jazz_guitarists';
 		$client   = new \GuzzleHttp\Client([
 			
 		'key' => 'nYZwoYUo'
 			]);
   
-    	$responses = $client->get($uri);
+    	$responses = $client->get($myApi);
   		//return $responses->getStatusCode();
 // "200"
 		//return $responses->getHeader('content-type');
@@ -53,8 +53,10 @@ class WelcomeController extends Controller {
     	
     	$decode = json_decode($res, true);
 
-    	
+    	return $decode;
     	$places = $decode['places'];
+    	$airlines = $decode['airlines'];
+
 
     	//return $places;
 
@@ -108,7 +110,7 @@ class WelcomeController extends Controller {
 		// {"type":"User"...'
 		
 */
-		return view('api')->with(compact('places'));
+		//return view('api')->with(compact('airlines'));
 		
 }
 }

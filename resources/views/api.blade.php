@@ -2,36 +2,26 @@
 
 @section ('content')
 
-		<?php $i = 0; ?>
-		 {{ $places }}
-
-		@foreach ($places as $city) 
+		
+	<!--	@foreach ($airlines as $flight) 
 			<div class="container">
-				<?php if ($i == 0)  { ?>
-    		 <p>Originating City: <strong>{{ $cityName = $city['name'] }}</strong></h1>
-    		 <p>{{ $cityLongName = $city['longName'] }}</p>
-    		 <p>{{ $cityCountryCode  = $city['countryCode'] }}</p>
-    		 <p>{{ $cityRegionCode = $city['regionCode'] }}</p>
+    		 <p>Originating flight: <strong>{{ $flightName = $flight['name'] }}</strong></h1>
+    		 <p>{{ $flightLongName = $flight['url'] }}</p>
+    		 <img src="http://www.rome2rio.com{{ $flightIconPath  = $flight['iconPath'] }}" alt="flights"></img></p>
+    		 
+    	@endforeach -->
+    	<div class="container">
+    	@foreach ($airlines as $flight) 
+    	<?php $flightName = $flight['name'] ?>
+    	<?php $flightLongName = $flight['url'] ?>
+    	<?php $flightIconPath  = $flight['iconPath'] ?>
+			
+    		 <p>Originating flight: <strong>{{ $flightName }}</strong></h1>
+    		 <p>{{ $flightLongName }}</p>
+    		 <img src="http://www.rome2rio.com{{ $flightIconPath }}" alt="flights"></img></p>
 
-    		 	<?php } else if ($i == 1) { ?>
-    		 <p>Destination City: <strong>{{ $cityName = $city['name'] }}</strong></h1>
-    		 <p>{{ $cityLongName = $city['longName'] }}</p>
-    		 <p>{{ $cityCountryCode  = $city['countryCode'] }}</p>
-    		 <p>{{ $cityRegionCode = $city['regionCode'] }}</p>
-    		</div>
-    			<?php } ?>
+    		 
     	@endforeach
 
 @stop
 
-$i = 0;
-$len = count($array);
-foreach ($array as $item) {
-    if ($i == 0) {
-        // first
-    } else if ($i == $len - 1) {
-        // last
-    }
-    // …
-    $i++;
-}
