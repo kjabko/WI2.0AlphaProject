@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'WelcomeController@index');
-Route::get('api', 'WelcomeController@api');
+Route::get('api', 'ApiController@api');
 Route::get('home', 'HomeController@home');
 Route::get('flights', 'FlightsSearchController@flights');
 

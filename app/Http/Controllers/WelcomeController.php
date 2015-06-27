@@ -37,13 +37,11 @@ class WelcomeController extends Controller {
 		$origName = 'Dublin';
 		$destName = 'Berlin';
 		$uri = 'http://free.rome2rio.com/api/1.2/json/Search?key='.$key.'&oName='.$origName.'&dName='.$destName;
-		$myApi = 'http://localhost/codeigniter/index.php/api/jazz/jazz_guitarists';
 		$client   = new \GuzzleHttp\Client([
 			
-		'key' => 'nYZwoYUo'
 			]);
   
-    	$responses = $client->get($myApi);
+    	$responses = $client->get($uri);
   		//return $responses->getStatusCode();
 // "200"
 		//return $responses->getHeader('content-type');
