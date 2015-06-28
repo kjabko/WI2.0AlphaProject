@@ -160,3 +160,11 @@ body {
   .cover-container {
     width: 700px;
   }
+label {
+  margin-left: -630px;
+}
+#map-canvas
+{
+  width: 700px;
+  height: 300px;
+}

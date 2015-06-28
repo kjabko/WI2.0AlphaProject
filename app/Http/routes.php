@@ -15,6 +15,7 @@ Route::get('/', 'WelcomeController@index');
 Route::get('api', 'ApiController@api');
 Route::get('home', 'HomeController@home');
 Route::get('flights', 'FlightsSearchController@flights');
+Route::get('create_tile', 'TilesCreateController@createTile');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
