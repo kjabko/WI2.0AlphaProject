@@ -49,7 +49,7 @@
                 </ul>
               </nav>
             </div>
-            <br><br>
+            <br>
             {!! Form::open() !!}
               <div class="form-group">
               {!! Form::label('title', 'Title:') !!}
@@ -66,11 +66,11 @@
                <div id="map-canvas"></div>
              </div>
               <div class="form-group">
-               {!! Form::label('lat', 'Latitiude:') !!}
+               {!! Form::label('lat', 'Latitude:') !!}
                {!! Form::text('lat', null, array('placeholder'=>'Latitude', 'class'=>'form-control')) !!}
              </div>
               <div class="form-group">
-               {!! Form::label('lng', 'Longitute:') !!}
+               {!! Form::label('lng', 'Longitude:') !!}
                {!! Form::text('lng', null, array('placeholder'=>'Longitude', 'class'=>'form-control')) !!}
              </div>
               {!! Form::submit('Save', array('class'=>'btn btn-primary btn-lg btn-block')) !!}
@@ -84,16 +84,16 @@
     
         var map = new google.maps.Map(document.getElementById('map-canvas'),{
           center: {
-            lat: 27.72,
-            lng: 85.36
+            lat: 53.34,
+            lng: -6.26
           },
           zoom: 15
         });
 
         var marker = new google.maps.Marker({
           position: {
-            lat: 27.72,
-            lng: 85.36
+            lat: 53.34,
+            lng: -6.26
           },
           map: map,
           draggable: true
