@@ -49,24 +49,13 @@
               </nav>
             </div>
             <br>
-            {!! Form::open(['url' => 'upload']) !!}
+            {!! Form::open(['url'=>'store']) !!}
               <div class="form-group">
               {!! Form::label('title', 'Title:') !!}
-              {!! Form::text('name', null, array('placeholder'=>'Tile name', 'class'=>'form-control')) !!}
+              {!! Form::text('title', null, array('placeholder'=>'Tile name', 'class'=>'form-control')) !!}
               </div>
               <div class="form-group">
-                {!! Form::label('image', 'Add image:') !!}
-              {!! Form::file('file', array('multiple' => 'multiple', 'id' => 'upload-image', 'enctype' => 'multipart/form-data', 'files' => true))  !!}
-              </div>
-               <div class="form-group" id="form-buttons">
-              <div class="checkbox" style="margin: 20px 10px;">
-                <label>
-                {!! Form::hidden('private', 0); !!}
-                {!! Form::checkbox('private', 1); !!} Check image(s) as private
-                </label>
-              </div>
-              <div class="form-group">
-               {!! Form::label('map', 'Map:') !!}
+               {!! Form::label('place', 'Map:') !!}
                {!! Form::text('place', null, array('placeholder'=>'Add place', 'id' => 'searchmap', 'class'=>'form-control')) !!}
                <br>
                <div id="map-canvas"></div>

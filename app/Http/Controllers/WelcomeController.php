@@ -25,36 +25,7 @@ class WelcomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
-		return view('app');
-	}
-
-	public function api()
-	{
-		//$arrayName = array('key' => 'nYZwoYUo');
-		$key = 'nYZwoYUo';
-		$origName = 'Dublin';
-		$destName = 'Berlin';
-		$uri = 'http://free.rome2rio.com/api/1.2/json/Search?key='.$key.'&oName='.$origName.'&dName='.$destName;
-		$client   = new \GuzzleHttp\Client([
-			
-			]);
-  
-    	$responses = $client->get($uri);
-  		//return $responses->getStatusCode();
-// "200"
-		//return $responses->getHeader('content-type');
-// 'application/json; charset=utf8'
-    	 $res = $responses->getBody();
-    	
-    	
-    	$decode = json_decode($res, true);
-
-    	return $decode;
-    	$places = $decode['places'];
-    	$airlines = $decode['airlines'];
-
+	
 
     	//return $places;
 
@@ -95,17 +66,7 @@ class WelcomeController extends Controller {
 //}
     	//return view('api')->with(compact('responses'));
   
-	/*	$client = new GuzzleHttp\Client();
-		$res = $client->get("http://api.github.com/users/", ['auth' =>  ['user', 'pass']]);
-		$res->getStatusCode();
-		$username = 'antonioribeiro';
-
-		$res = $client->get("users/$username")->send();
-		// "200"
-		//$res->getHeader('content-type');
-		// 'application/json; charset=utf8'
-		//$res->getBody();
-		// {"type":"User"...'
+	
 		
 */
 		//return view('api')->with(compact('airlines'));

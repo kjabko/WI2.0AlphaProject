@@ -15,26 +15,5 @@ class ApiController extends Controller {
 	 * @return Response
 	 */
 
-	public function api()
-	{
-		$key = 'nYZwoYUo';
-		$origName = 'Warsaw';
-		$destName = 'London';
-		$uri = 'http://free.rome2rio.com/api/1.2/json/Search?key='.$key.'&oName='.$origName.'&dName='.$destName;
-		$client   = new \GuzzleHttp\Client([
-			
-			]);
-  
-    	$responses = $client->get($uri);
-  		//return $responses->getStatusCode();
-// "200"
-		//return $responses->getHeader('content-type');
-// 'application/json; charset=utf8'
-    	 $res = $responses->getBody();
-    	
-    	
-    	$decode = json_decode($res, true);
-
-    	return $decode;
-    }
+	
  }

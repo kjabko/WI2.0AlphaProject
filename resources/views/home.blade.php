@@ -43,7 +43,7 @@
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="{{ url('http://www.travelnow.com/templates/490320?lang=en&currency=USD&secureUrlFromDataBridge=https%3A%2F%2Fwww.travelnow.com&requestVersion=V2&checkin=6%2F20%2F15&checkout=6%2F22%2F15&creditCardInfo.needStartDate=true&filter.highPrice=2147483647&filter.lowPrice=0&roomsCount=1&rooms[0].adultsCount=2&rooms[0].childrenCount=0&standardCheckin=6%2F20%2F2015&standardCheckout=6%2F22%2F2015&autosearch=true') }}">Hotels</a></li>
-                  <li><a href="{{ url('/flights') }}">Search</a></li>
+                  <li><a href="{{ url('/test') }}">test</a></li>
                   <li><a href="{{ url('/create_tile') }}">Create Tile</a></li>
                   <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
                 </ul>
