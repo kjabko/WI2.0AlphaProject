@@ -54,6 +54,10 @@
               {!! Form::label('title', 'Title:') !!}
               {!! Form::text('title', null, array('placeholder'=>'Tile name', 'class'=>'form-control')) !!}
               </div>
+               <div class="form-group">
+                {!! Form::label('image', 'Add image:') !!}
+              {!! Form::file('image', array('multiple' => 'multiple', 'id' => 'upload-image', 'enctype' => 'multipart/form-data', 'files' => true))  !!}
+              </div>
               <div class="form-group">
                {!! Form::label('place', 'Map:') !!}
                {!! Form::text('place', null, array('placeholder'=>'Add place', 'id' => 'searchmap', 'class'=>'form-control')) !!}

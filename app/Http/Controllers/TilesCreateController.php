@@ -1,5 +1,8 @@
 <?php 
 namespace App\Http\Controllers;
+use App\Tile;
+use Image;
+use Redirect;
 use Request;
 
 class TilesCreateController extends Controller {
@@ -26,14 +29,14 @@ class TilesCreateController extends Controller {
 
 	public function upload()
     {
-        $file = Request::file('file');
-       // $serializedFile = array();
+        $files = Request::file('file');
+        //$serializedFile = array();
 
-        //foreach ($files as $file) {
-            // Validate files from input file
-          //  $validation = Tile::validateImage(array('file'=> $file));
+        foreach ($files as $file) {
+            //Validate files from input file
+          $validation = Tile::validateTile(array('file'=> $file));
 
-            //if (! $validation->fails()) {
+            if (! $validation->fails()) {
 
                 // If validation pass, get filename and extension
                 // Generate random (12 characters) string
@@ -47,27 +50,27 @@ class TilesCreateController extends Controller {
                 $file->move($destinationPath, $fileName);
 
                 echo '<img src="uploads/'. $fileName;
-				}
-                /*
+				
+                
 
                 // Crop image (possible by Intervention Image Class)
                 // And save as miniature
                 Image::make($destinationPath . '/' . $fileName)->crop(250, 250, 10, 10)->save($destinationPath . '/min_' . $fileName);
 
                 // Insert image information to database
-                Tile::insertImage($folderName, $fileName);
+                Tile::insertTile($folderName, $fileName);
             } else {
-                return Redirect::route('home');
+                return Redirect::to('/home');
                         ///->with('status', 'alert-danger')
                         //->with('image-message', 'There is a problem uploading your image!');
             }
 
-            $serializedFile[] = $folderName;
+            //$serializedFile[] = $folderName;
         }
 
-        return Redirect::route('search');
+        return Redirect::to('/create_tile');
                         //->with('status', 'alert-success')
                         //->with('files', $serializedFile)
                         //->with('image-message', 'Congratulations! Your photo(s) has been added');
-    } */
+    } 
 }

@@ -14,9 +14,10 @@ class CreateTileTable extends Migration {
 	{
 		Schema::create('tile', function(Blueprint $table)
 		{
-			$table->increments('id');
+			$table->string('id');
 			$table->integer('user_id');
 			$table->string('title');
+			$table->string('place');
 			$table->string('img_sm');
 			$table->string('img_bg');
 			$table->boolean('private');
@@ -37,3 +38,4 @@ class CreateTileTable extends Migration {
 	}
 
 }
+

@@ -49,44 +49,50 @@
               </nav>
             </div>
             <br>
-            {!! Form::open(['url' => 'upload']) !!}
-              <div class="form-group">
+    {!! Form::open(array('url' => 'upload', 'method' => 'post', 'id' => 'upload-image', 'enctype' => 'multipart/form-data', 'files' => true)) !!}
+            <div class="form-group">
               {!! Form::label('title', 'Title:') !!}
-              {!! Form::text('name', null, array('placeholder'=>'Tile name', 'class'=>'form-control')) !!}
+              {!! Form::text('title', null, array('placeholder'=>'Tile name', 'class'=>'form-control')) !!}
               </div>
-              <div class="form-group">
-                {!! Form::label('image', 'Add image:') !!}
-              {!! Form::file('file', array('multiple' => 'multiple', 'id' => 'upload-image', 'enctype' => 'multipart/form-data', 'files' => true))  !!}
-              </div>
-               <div class="form-group" id="form-buttons">
-              <div class="checkbox" style="margin: 20px 10px;">
+            <div class="form-group">
+              {!! Form::file('file[]', array('multiple' => 'multiple', 'id' => 'multiple-files', 'accept' => 'image/*')) !!}
+
+            <div id="files"></div>
+            <div class="form-group" id="form-buttons">
+            <div class="checkbox">
                 <label>
-                {!! Form::hidden('private', 0); !!}
-                {!! Form::checkbox('private', 1); !!} Check image(s) as private
+                    {!! Form::hidden('private', 0) !!}
+                    {!! Form::checkbox('private', 1) !!} Check image(s) as private
                 </label>
-              </div>
-              <div class="form-group">
-               {!! Form::label('map', 'Map:') !!}
+            </div>
+          </div>
+            <div class="form-group">
+               {!! Form::label('place', 'Map:') !!}
                {!! Form::text('place', null, array('placeholder'=>'Add place', 'id' => 'searchmap', 'class'=>'form-control')) !!}
-               <br>
-               <div id="map-canvas"></div>
-             </div>
-              <div class="form-group">
+             <br>
+           <div id="map-canvas"></div>
+           </div>
+            <div class="form-group">
                {!! Form::label('lat', 'Latitude:') !!}
                {!! Form::text('lat', null, array('placeholder'=>'Latitude', 'class'=>'form-control')) !!}
-             </div>
-              <div class="form-group">
+           </div>
+           <div class="form-group">
                {!! Form::label('lng', 'Longitude:') !!}
                {!! Form::text('lng', null, array('placeholder'=>'Longitude', 'class'=>'form-control')) !!}
-             </div>
-              {!! Form::submit('Save', array('class'=>'btn btn-primary btn-lg btn-block')) !!}
-              
-            {!! Form::close() !!}
+           </div>
+            {!! Form::submit('Create tile', array('class' => 'btn btn-primary btn-lg btn-block')) !!}
+
+            {!! Form::reset('Reset', array('class' => 'btn btn-warning btn-block', 'id' => 'reset')) !!}
+        </div>
+
+    {!! Form::close() !!}
+
           </div>
         </div>
       </div>
     </div>
-      <script>
+     
+    <script>
     
         var map = new google.maps.Map(document.getElementById('map-canvas'),{
           center: {
@@ -127,8 +133,7 @@
           $('#lat').val(lat);
           $('#lng').val(lng);
         });
-    </script>
-
+  </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

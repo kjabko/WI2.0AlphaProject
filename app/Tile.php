@@ -1,13 +1,13 @@
 <?php namespace App;
-
+use Auth;
+use Request;
+use Validator;
 use Illuminate\Database\Eloquent\Model;
 
 class Tile extends Model {
 
-	protected $fillable ['title', 'lat', 'lng'];
-
-
-	protected $guarded ['id', 'created at', 'updated at'];
+     protected $fillable = ['title', 'place', 'lat', 'lng'];
+	protected $guarded = ['id', 'created at', 'updated at'];
 
 	/**
      * The database table used by the model.
@@ -21,7 +21,7 @@ class Tile extends Model {
      *
      * @var array
      */
-	public static $rules ['file' => 'mimes:jpeg,bmp,png|max:3000'];
+	public static $rules = ['file' => 'mimes:jpeg,bmp,png|max:3000'];
 
 	/**
      * Validate image method.
@@ -46,11 +46,15 @@ class Tile extends Model {
 		return Tile::insert(array(
 			'id' 		=> $folderName,
 			'user_id' 	=> Auth::check() ? Auth::user()->id : 0,
-			'img_bg' 	=> $fileName,
-			'img_sm' 	=> 'min_' . $fileName,
-			'private'	=> Input::get('private') ? 1 : 0,
-			'created_at'=> date('Y-m-d h:i:s'),
-			'updated_at'=> date('Y-m-d H:i:s')
+               'title'        => Request::get('title'),
+               'place'        => Request::get('place'),
+               'lat'          => Request::get('lat'),
+               'lng'          => Request::get('lng'),
+			'img_bg' 	     => $fileName,
+			'img_sm' 	     => 'min_' . $fileName,
+			'private'	     => Request::get('private') ? 1 : 0,
+			'created_at'   => date('Y-m-d h:i:s'),
+			'updated_at'   => date('Y-m-d H:i:s')
 			));
 	}
 	
