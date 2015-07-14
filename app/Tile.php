@@ -1,5 +1,6 @@
 <?php namespace App;
 use Auth;
+use Requests;
 use Request;
 use Validator;
 use Illuminate\Database\Eloquent\Model;
@@ -21,7 +22,7 @@ class Tile extends Model {
      *
      * @var array
      */
-	public static $rules = ['file' => 'mimes:jpeg,bmp,png|max:3000'];
+	//public static $rules = ['file' => 'mimes:jpeg,bmp,png|max:3000'];
 
 	/**
      * Validate image method.
@@ -29,10 +30,10 @@ class Tile extends Model {
      * @param  file $data
      * @return object Validator
      */
-	public static function validateTile($data)
-	{
-		return Validator::make($data, static::$rules);
-	}
+	//public static function validateTile($data)
+	//{
+	//	return Validator::make($data, static::$rules);
+	//}
 
 	/**
      * Insert image to database table;

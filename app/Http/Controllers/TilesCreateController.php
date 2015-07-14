@@ -1,6 +1,8 @@
 <?php 
 namespace App\Http\Controllers;
 use App\Tile;
+use App\Http\Requests;
+use App\Http\Requests\CreateTileRequest;
 use Image;
 use Redirect;
 use Request;
@@ -27,16 +29,16 @@ class TilesCreateController extends Controller {
 		return view('tile_create');
 	}
 
-	public function upload()
+	public function upload(CreateTileRequest $request)
     {
         $files = Request::file('file');
         //$serializedFile = array();
 
         foreach ($files as $file) {
             //Validate files from input file
-          $validation = Tile::validateTile(array('file'=> $file));
+         // $validation = Tile::validateTile(array('file'=> $file));
 
-            if (! $validation->fails()) {
+           // if (! $validation->fails()) {
 
                 // If validation pass, get filename and extension
                 // Generate random (12 characters) string
@@ -59,18 +61,18 @@ class TilesCreateController extends Controller {
 
                 // Insert image information to database
                 Tile::insertTile($folderName, $fileName);
-            } else {
+            //} else {
                 return Redirect::to('/home');
                         ///->with('status', 'alert-danger')
                         //->with('image-message', 'There is a problem uploading your image!');
-            }
+           // }
 
             //$serializedFile[] = $folderName;
-        }
+        //}
 
-        return Redirect::to('/create_tile');
+        //return Redirect::to('/create_tile');
                         //->with('status', 'alert-success')
-                        //->with('files', $serializedFile)
+    }                    //->with('files', $serializedFile)
                         //->with('image-message', 'Congratulations! Your photo(s) has been added');
     } 
 }
