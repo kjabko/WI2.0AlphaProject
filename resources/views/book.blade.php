@@ -55,9 +55,32 @@
       </div>
     </div>
   </nav>
-{!! Html::image('uploads/' . $userTile->id . '/' . $userTile->img_bg, $userTile->img_bg, array('class' => 'img-responsive')) !!}
+{!! Html::image('uploads/' . $userTile->id . '/' . $userTile->img_bg, $userTile->img_bg, array('class' => 'img-responsive', 'style'=>'width:500px; height:400px;')) !!}
  
  {!! $userTile->title !!}
+
+ <div id="map-canvas"></div>
+
+ <script>
+ var lat = {!! $userTile->lat !!};
+ var lng = {!! $userTile->lng !!};
+
+ var map = new google.maps.Map(document.getElementById('map-canvas'),{
+  center:{
+    lat: lat,
+    lng: lng
+  },
+    zoom: 15
+ });
+
+ var marker = new google.maps.Marker({
+  position:{
+    lat:lat,
+    lng:lng
+  },
+  map:map
+ });
+ </script>
 
    
    
