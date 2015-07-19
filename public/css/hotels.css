@@ -10,14 +10,14 @@ search-widget {
     text-align: left;
     font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
     color: #9cc3ed;
-    overflow: hidden; /* Cut the content out of the bounds of search-widget */
+    /* /* Cut the content out of the bounds of search-widget */
 }
 .search-widget {
     font-size: 14px!important;
     text-align: left;
     font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
     color: #fff;
-    overflow: hidden; /* Cut the content out of the bounds of search-widget */
+    /* /* Cut the content out of the bounds of search-widget */
 }
 
 /* Search widget inner indents */
@@ -51,7 +51,7 @@ search-widget .search-widget-inner {
     display: block;
     margin-bottom: 2px;
     margin-left: 1px;
-    overflow: hidden; /* Cut too long labels */
+     /* Cut too long labels */
 }
 
 /* Properties for input fields. Here you can change font, color, border and background style */
@@ -97,7 +97,7 @@ search-widget .search-widget-inner {
     -webkit-border-radius: 5px;
     -khtml-border-radius: 5px;
     width: auto;
-    overflow: visible; /* Reset paddings in IE */
+    /*overflow: visible; /* Reset paddings in IE */
     display: inline-block;
 }
 
@@ -125,7 +125,7 @@ search-widget .search-widget-inner {
 /* Predefined destinations list item */
 .search-widget .predefined-destinations-block li {
     float: left;
-    overflow: hidden; /* Cut long labels */
+     /* Cut long labels */
     width: 33%; /* Items can be divided into 2 columns (50%) or 3 columns (33%) */
     margin-top: 1px;
 }
@@ -180,7 +180,7 @@ search-widget .search-widget-inner {
 .search-widget .reset-dates-block {
     clear: both; /* Reset dates section starts from new line */
     white-space: nowrap;
-    overflow: hidden; /* Cut long label */
+     /* Cut long label */
 }
 
 /* Align label with checkbox */

@@ -35,12 +35,7 @@ class TilesCreateController extends Controller {
         //$serializedFile = array();
 
         foreach ($files as $file) {
-            //Validate files from input file
-         // $validation = Tile::validateTile(array('file'=> $file));
 
-           // if (! $validation->fails()) {
-
-                // If validation pass, get filename and extension
                 // Generate random (12 characters) string
                 // And specify a folder name of uploaded image
                 $fileName        = $file->getClientOriginalName();
@@ -51,28 +46,44 @@ class TilesCreateController extends Controller {
                 // Move file to generated folder
                 $file->move($destinationPath, $fileName);
 
-                echo '<img src="uploads/'. $fileName;
+               // echo '<img src="uploads/'. $fileName;
 				
                 
 
-                // Crop image (possible by Intervention Image Class)
+                // resize image
                 // And save as miniature
-                Image::make($destinationPath . '/' . $fileName)->crop(250, 250, 10, 10)->save($destinationPath . '/min_' . $fileName);
+                Image::make($destinationPath . '/' . $fileName)->resize(250, 250)->save($destinationPath . '/min_' . $fileName);
 
                 // Insert image information to database
                 Tile::insertTile($folderName, $fileName);
-            //} else {
-                return Redirect::to('/home');
-                        ///->with('status', 'alert-danger')
-                        //->with('image-message', 'There is a problem uploading your image!');
-           // }
-
-            //$serializedFile[] = $folderName;
-        //}
-
-        //return Redirect::to('/create_tile');
-                        //->with('status', 'alert-success')
-    }                    //->with('files', $serializedFile)
-                        //->with('image-message', 'Congratulations! Your photo(s) has been added');
+    
+                return Redirect::to('/tiles');              
+        }                
     } 
+
+    public function tilesShow()
+    {
+       
+        $showTiles = Tile::orderBy('created_at', 'desc')->paginate('20');
+
+        return view('tiles', compact('showTiles'));
+
+
+        //return view('tiles')->with(compact('title'));
+
+        //('images/list')
+          //          ->with('title', 'List of images')
+            //        ->with('images', Images::orderBy('created_at', 'desc')
+              //                              ->where('private', 0)
+                //                            ->paginate('42'));
+    }
+
+    public function book($id)
+    {
+         $showTiles = Tile::all();
+
+        //return view('book', compact('showTiles'));
+         return view('book')->with('userTile', Tile::findOrFail($id));
+
+    }
 }

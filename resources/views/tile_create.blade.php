@@ -32,26 +32,35 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Triplofi</a>
+      </div>
 
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Triplofi</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="{{ url('/home') }}">Home</a></li>
-                </ul>
-              </nav>
-            </div>
-            <br>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="{{ url('/home') }}">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url('/tiles') }}">My Tiles</a></li>
+            <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <h2>Create Tile</h2>
     {!! Form::open(array('url' => 'upload', 'method' => 'post', 'id' => 'upload-image', 'enctype' => 'multipart/form-data', 'files' => true)) !!}
             <div class="form-group">
-              {!! Form::label('title', 'Title:') !!}
+              
               {!! Form::text('title', null, array('placeholder'=>'Tile name', 'class'=>'form-control')) !!}
               </div>
             <div class="form-group">
@@ -59,7 +68,7 @@
 
             <div id="files"></div>
             <div class="form-group" id="form-buttons">
-            <div class="checkbox">
+            <div class="checkbox" id="checkbox_1">
                 <label>
                     {!! Form::hidden('private', 0) !!}
                     {!! Form::checkbox('private', 1) !!} Check image(s) as private
@@ -67,17 +76,17 @@
             </div>
           </div>
             <div class="form-group">
-               {!! Form::label('place', 'Map:') !!}
+               
                {!! Form::text('place', null, array('placeholder'=>'Add place', 'id' => 'searchmap', 'class'=>'form-control')) !!}
              <br>
            <div id="map-canvas"></div>
            </div>
             <div class="form-group">
-               {!! Form::label('lat', 'Latitude:') !!}
+               {!! Form::label('lat','Lat:') !!}
                {!! Form::text('lat', null, array('placeholder'=>'Latitude', 'class'=>'form-control')) !!}
            </div>
            <div class="form-group">
-               {!! Form::label('lng', 'Longitude:') !!}
+               {!! Form::label('lng', 'Lng:') !!}
                {!! Form::text('lng', null, array('placeholder'=>'Longitude', 'class'=>'form-control')) !!}
            </div>
             {!! Form::submit('Create tile', array('class' => 'btn btn-primary btn-lg btn-block')) !!}
@@ -142,6 +151,7 @@
           $('#lng').val(lng);
         });
   </script>
+    <div class="col-md-4"></div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
