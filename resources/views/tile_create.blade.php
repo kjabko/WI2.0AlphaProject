@@ -30,9 +30,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
-  <body>
-    <nav class="navbar navbar-default">
+<body>
+  <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -55,44 +54,56 @@
       </div>
     </div>
   </nav>
-          <div class="col-md-4"></div>
-          <div class="col-md-4">
+<!--################################################################################################################################
+  ################################################################################################################################-->
+  <div class="col-md-2">
+  </div>
+    <div class="col-md-4">
             <h2>Create Tile</h2>
     {!! Form::open(array('url' => 'upload', 'method' => 'post', 'id' => 'upload-image', 'enctype' => 'multipart/form-data', 'files' => true)) !!}
             <div class="form-group">
               
               {!! Form::text('title', null, array('placeholder'=>'Tile name', 'class'=>'form-control')) !!}
-              </div>
+            </div>
             <div class="form-group">
               {!! Form::file('file[]', array('multiple' => 'multiple', 'id' => 'multiple-files', 'accept' => 'image/*')) !!}
-
-            <div id="files"></div>
-            <div class="form-group" id="form-buttons">
-            <div class="checkbox" id="checkbox_1">
-                <label>
-                    {!! Form::hidden('private', 0) !!}
-                    {!! Form::checkbox('private', 1) !!} Check image(s) as private
-                </label>
-            </div>
-          </div>
-            <div class="form-group">
-               
+              <div id="files">
+              </div>
+                <div class="form-group" id="form-buttons">
+                  <div class="checkbox" id="checkbox_1">
+                    <label>
+                     {!! Form::hidden('private', 0) !!}
+                     {!! Form::checkbox('private', 1) !!} Check image(s) as private
+                    </label>
+                  </div>
+                </div>
+              <div class="form-group">
                {!! Form::text('place', null, array('placeholder'=>'Add place', 'id' => 'searchmap', 'class'=>'form-control')) !!}
-             <br>
-           <div id="map-canvas"></div>
-           </div>
-            <div class="form-group">
+              </div>
+              <div class="form-group">
+               {!! Form::textarea('lat', null, array('placeholder'=>'Description', 'class'=>'form-control')) !!}
+              </div>
+    </div>
+    </div>
+    <div class="col-md-4">
+                  <div id="map-canvas" style="margin-top:62px;">
+                  </div>
+              <div class="form-group">
                {!! Form::label('lat','Lat:') !!}
-               {!! Form::text('lat', null, array('placeholder'=>'Latitude', 'class'=>'form-control')) !!}
-           </div>
-           <div class="form-group">
+               {!! Form::text('lat', null, array('placeholder'=>'Latitude', 'class'=>'form-control', 'style'=>"margin-top:15px;")) !!}
+              </div>
+              <div class="form-group">
                {!! Form::label('lng', 'Lng:') !!}
                {!! Form::text('lng', null, array('placeholder'=>'Longitude', 'class'=>'form-control')) !!}
-           </div>
+              </div>
+    </div>
+  </div>
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-4">
             {!! Form::submit('Create tile', array('class' => 'btn btn-primary btn-lg btn-block')) !!}
 
             {!! Form::reset('Reset', array('class' => 'btn btn-warning btn-block', 'id' => 'reset')) !!}
-        </div>
 
     {!! Form::close() !!}
 
@@ -103,11 +114,9 @@
           @endforeach
       </ul>
     @endif
+   </div> 
 
-          </div>
-        </div>
-      </div>
-    </div>
+
      
     <script>
     

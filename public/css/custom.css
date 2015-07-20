@@ -48,3 +48,7 @@ ul
 {
   display: inline;
 }
+label
+{
+  display: none;
+}
