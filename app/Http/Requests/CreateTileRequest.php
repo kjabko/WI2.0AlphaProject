@@ -26,6 +26,7 @@ class CreateTileRequest extends Request {
 			'place'					=>	'required',
 			'lat'					=> 	'required',
 			'lng'					=>	'required',
+			'description'			=>	'required',
 			//'file'					=>	'required|mimes:jpeg,jpg,bmp,png,gif'
 		];
 	}

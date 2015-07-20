@@ -58,6 +58,8 @@
 {!! Html::image('uploads/' . $userTile->id . '/' . $userTile->img_bg, $userTile->img_bg, array('class' => 'img-responsive', 'style'=>'width:500px; height:400px;')) !!}
  
  {!! $userTile->title !!}
+ {!! $userTile->description !!}
+
 
  <div id="map-canvas"></div>
 

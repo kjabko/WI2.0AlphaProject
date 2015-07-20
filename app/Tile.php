@@ -48,6 +48,7 @@ class Tile extends Model {
 			'id' 		=> $folderName,
 			'user_id' 	=> Auth::check() ? Auth::user()->id : 0,
                'title'        => Request::get('title'),
+               'description'  => Request::get('description'),
                'place'        => Request::get('place'),
                'lat'          => Request::get('lat'),
                'lng'          => Request::get('lng'),

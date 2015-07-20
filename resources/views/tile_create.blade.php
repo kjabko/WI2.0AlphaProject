@@ -81,7 +81,7 @@
                {!! Form::text('place', null, array('placeholder'=>'Add place', 'id' => 'searchmap', 'class'=>'form-control')) !!}
               </div>
               <div class="form-group">
-               {!! Form::textarea('lat', null, array('placeholder'=>'Description', 'class'=>'form-control')) !!}
+               {!! Form::textarea('description', null, array('placeholder'=>'Description', 'class'=>'form-control')) !!}
               </div>
     </div>
     </div>

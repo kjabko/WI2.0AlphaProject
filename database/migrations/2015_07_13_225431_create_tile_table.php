@@ -17,6 +17,7 @@ class CreateTileTable extends Migration {
 			$table->string('id');
 			$table->integer('user_id');
 			$table->string('title');
+			$table->string('description');
 			$table->string('place');
 			$table->string('img_sm');
 			$table->string('img_bg');

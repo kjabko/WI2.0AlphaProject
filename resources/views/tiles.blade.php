@@ -69,21 +69,6 @@
 
   @endforeach   
 
-$images ; //array of image urls
-$countImages = count($images) ;
-
-$imagesPerRow = 5 ;
-
-for ($i = 0 ; $i < $countImages; $i++) {
-    //display image here
-    $image = $images[$i] ;
-    echo "<img src='$image'>" ;
-
-    if ($i % $imagesPerRow == 0) {
-        //have displayed an entire row
-        echo '<br>' ;
-    }
-}
    
     <!-- Bootstrap core JavaScript
     ================================================== -->
