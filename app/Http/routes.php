@@ -21,6 +21,8 @@ Route::get('test', 'TestController@create');
 Route::post('store', 'TestController@store');
 Route::get('tiles', 'TilesCreateController@tilesShow');
 Route::get('book/{id}', 'TilesCreateController@book');
+Route::delete('delete/{id}', 'TilesCreateController@destroy');
+Route::post('search', 'WelcomeController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

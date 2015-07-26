@@ -55,21 +55,45 @@
       </div>
     </div>
   </nav>
+<div id="pics">
 
   @foreach ($showTiles as $tile)
 
-    <div>
-      <ul>
-      <li><h3>{{ $tile->title }}</h3>
-        <a href="{{ url('/book', array('id' => $tile->id)) }}">
-      {!! Html::image('uploads/' . $tile->id . '/' . $tile->img_sm, $tile->img_sm, array('class' => 'img-responsive img-thumbnail image')) !!}</a></li>
-      </ul>
-      <!--<img src="http://localhost/wi2.0alphaproject/public/uploads/{{ $tile->id }}/{{ $tile->img_sm }}" img-responsive img-thumbnail alt="min_programming">-->      
+    <div class="col-sm-2">
+      <a href="{{ url('/book', array('id' => $tile->id)) }}">
+        <h3>{{ $tile->title }}</h3>
+          {!! Html::image('uploads/' . $tile->id . '/' . $tile->img_sm, $tile->img_sm, array('class' => 'img-responsive img-thumbnail')) !!}</a></li>
+      </a>
+      {!! Form::open(['url' => 'delete/'. $tile->id, 'method' => 'delete']) !!}
+      {!! Form::submit('Delete', ['class' => 'delete-button btn btn-danger btn-sm btn-block', 'style' => 'margin: 10px 0']) !!}
+      {!! Form::close() !!}
     </div>
 
   @endforeach   
+</div>
+   <script src="{{ asset('/js/infinitescroll.js') }}"></script>
 
-   
+ <script>
+        $('.pager').hide();
+        $('#pics').infinitescroll({
+            navSelector     : ".pager",
+            nextSelector    : ".pager a:last",
+            itemSelector    : ".col-sm-2",
+            debug           : false,
+            dataType        : 'html',
+            path: function(index) {
+                return "?page=" + index;
+            },
+            loading: {
+                finishedMsg: ""
+            }
+        }, function(newElements, data, url){
+
+            var $newElems = $( newElements );
+            $('#pics').masonry( 'appended', $newElems, true);
+
+        });
+    </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

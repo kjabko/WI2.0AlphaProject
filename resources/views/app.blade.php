@@ -56,6 +56,13 @@
 	@yield('content')
 		<div class="container">
 			<div class="content">
+			 {!! Form::open(['url' => 'search', 'class'=>'navbar-form navbar-right']) !!}
+          <div class="form-group">
+            {!! Form::text('firstname', null, array('class' => 'form-control', 'placeholder' => 'Find itenary tile', 'required' => 'required')) !!}
+          </div>                   
+          <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Search</button>
+      {!! Form::close() !!}
+
 				<div class="quote"><br><br><h2>{{ Inspiring::quote() }}</h2></div>
 			</div>
 			<!-- Start of dsa Zendesk Widget script -->

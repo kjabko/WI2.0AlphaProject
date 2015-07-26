@@ -60,13 +60,13 @@
   </div>
     <div class="col-md-4">
             <h2>Create Tile</h2>
-    {!! Form::open(array('url' => 'upload', 'method' => 'post', 'id' => 'upload-image', 'enctype' => 'multipart/form-data', 'files' => true)) !!}
+    {!! Form::open(['url' => 'upload', 'method' => 'post', 'id' => 'upload-image', 'enctype' => 'multipart/form-data', 'files' => true]) !!}
             <div class="form-group">
               
-              {!! Form::text('title', null, array('placeholder'=>'Tile name', 'class'=>'form-control')) !!}
+              {!! Form::text('title', null, ['placeholder'=>'Tile name', 'class'=>'form-control']) !!}
             </div>
             <div class="form-group">
-              {!! Form::file('file[]', array('multiple' => 'multiple', 'id' => 'multiple-files', 'accept' => 'image/*')) !!}
+              {!! Form::file('file[]', ['multiple' => 'multiple', 'id' => 'multiple-files', 'accept' => 'image/*']) !!}
               <div id="files">
               </div>
                 <div class="form-group" id="form-buttons">
@@ -78,10 +78,10 @@
                   </div>
                 </div>
               <div class="form-group">
-               {!! Form::text('place', null, array('placeholder'=>'Add place', 'id' => 'searchmap', 'class'=>'form-control')) !!}
+               {!! Form::text('place', null, ['placeholder'=>'Add place', 'id' => 'searchmap', 'class'=>'form-control']) !!}
               </div>
               <div class="form-group">
-               {!! Form::textarea('description', null, array('placeholder'=>'Description', 'class'=>'form-control')) !!}
+               {!! Form::textarea('description', null, ['placeholder'=>'Description', 'class'=>'form-control']) !!}
               </div>
     </div>
     </div>
@@ -90,20 +90,20 @@
                   </div>
               <div class="form-group">
                {!! Form::label('lat','Lat:') !!}
-               {!! Form::text('lat', null, array('placeholder'=>'Latitude', 'class'=>'form-control', 'style'=>"margin-top:15px;")) !!}
+               {!! Form::text('lat', null, ['placeholder'=>'Latitude', 'class'=>'form-control', 'style'=>"margin-top:15px;"]) !!}
               </div>
               <div class="form-group">
                {!! Form::label('lng', 'Lng:') !!}
-               {!! Form::text('lng', null, array('placeholder'=>'Longitude', 'class'=>'form-control')) !!}
+               {!! Form::text('lng', null, ['placeholder'=>'Longitude', 'class'=>'form-control']) !!}
               </div>
     </div>
   </div>
     <div class="col-md-2">
     </div>
     <div class="col-md-4">
-            {!! Form::submit('Create tile', array('class' => 'btn btn-primary btn-lg btn-block')) !!}
+            {!! Form::submit('Create tile', ['class' => 'btn btn-primary btn-lg btn-block']) !!}
 
-            {!! Form::reset('Reset', array('class' => 'btn btn-warning btn-block', 'id' => 'reset')) !!}
+            {!! Form::reset('Reset', ['class' => 'btn btn-warning btn-block', 'id' => 'reset']) !!}
 
     {!! Form::close() !!}
 

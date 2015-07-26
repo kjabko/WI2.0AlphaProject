@@ -80,10 +80,26 @@ class TilesCreateController extends Controller {
 
     public function book($id)
     {
-         $showTiles = Tile::all();
+        Tile::all();
 
         //return view('book', compact('showTiles'));
          return view('book')->with('userTile', Tile::findOrFail($id));
 
+
+    }
+
+    /**
+     * Delete specified image from database.
+     *
+     * @param  int $id
+     * @return object Redirect
+     */
+    public function destroy($id)
+    {
+        Tile::find($id)->delete();
+
+        return Redirect::to('/tiles'); 
+                        //->with('status', 'alert-success')
+                        //->with('message', 'Image removed properly.');
     }
 }

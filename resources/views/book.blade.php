@@ -49,17 +49,18 @@
           <li><a href="{{ url('/home') }}">Home</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="{{ url('/create_tile') }}">Create Another Tile</a></li>
+            <li><a href="{{ url('/tiles') }}">Tiles</a></li>
             <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
         </ul>
       </div>
     </div>
   </nav>
+
+
 {!! Html::image('uploads/' . $userTile->id . '/' . $userTile->img_bg, $userTile->img_bg, array('class' => 'img-responsive', 'style'=>'width:500px; height:400px;')) !!}
  
  {!! $userTile->title !!}
  {!! $userTile->description !!}
-
 
  <div id="map-canvas"></div>
 
@@ -84,7 +85,8 @@
  });
  </script>
 
-   
+ 
+    
    
     <!-- Bootstrap core JavaScript
     ================================================== -->

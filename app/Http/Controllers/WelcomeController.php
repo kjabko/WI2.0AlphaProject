@@ -30,5 +30,10 @@ class WelcomeController extends Controller {
 	{
 		return view('app');
 	}
+
+	public function search()
+	{
+		
+	}
     	
 }
