@@ -68,5 +68,5 @@ class Tile extends Model {
      public function users()
      {
      	return $this->belongsTo('Users', 'user_id');
-     }	
+     }
 }

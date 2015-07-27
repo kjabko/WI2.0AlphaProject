@@ -1,4 +1,7 @@
 <?php namespace App\Http\Controllers;
+use DB;
+use Request;
+
 class WelcomeController extends Controller {
 	/*
 	|--------------------------------------------------------------------------
@@ -33,7 +36,20 @@ class WelcomeController extends Controller {
 
 	public function search()
 	{
-		
-	}
-    	
+		$input = Request::input('keyword');
+
+
+		$search  = DB::table('tile')->where('title', 'LIKE', '%'.$input.'%')
+                    ->orWhere('place','LIKE', '%'.$input.'%')
+                    ->get();
+
+        if (!empty($search))
+        {
+        	return view('search', compact('search'));
+        }   
+        else 
+        {
+        	return '<h3>Sorry, No results for '. $input .'</h3>';
+        }
+    }	
 }

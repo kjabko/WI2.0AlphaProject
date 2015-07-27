@@ -12,17 +12,28 @@
 */
 
 Route::get('/', 'WelcomeController@index');
+
 Route::get('api', 'ApiController@api');
+
 Route::get('home', 'HomeController@home');
+
 Route::get('flights', 'FlightsSearchController@flights');
+
 Route::get('create_tile', 'TilesCreateController@createTile');
+
 Route::post('upload', 'TilesCreateController@upload');
+
 Route::get('test', 'TestController@create');
+
 Route::post('store', 'TestController@store');
+
 Route::get('tiles', 'TilesCreateController@tilesShow');
+
 Route::get('book/{id}', 'TilesCreateController@book');
+
 Route::delete('delete/{id}', 'TilesCreateController@destroy');
-Route::post('search', 'WelcomeController@index');
+
+Route::post('search', 'WelcomeController@search');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
