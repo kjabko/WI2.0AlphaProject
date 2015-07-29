@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use DB;
 use Request;
+use App\Tile;
 
 class WelcomeController extends Controller {
 	/*
@@ -52,4 +53,12 @@ class WelcomeController extends Controller {
         	return '<h3>Sorry, No results for '. $input .'</h3>';
         }
     }	
+
+    public function plan()
+    {
+    	$showTiles = Tile::paginate('9');
+
+        return view('plan', compact('showTiles'));
+
+    }
 }

@@ -9,9 +9,14 @@
     
                 {!! Html::image('uploads/' . $result->id . '/' . $result->img_sm, $result->img_sm, array('class' => 'img-responsive', 'style'=>'width:75px; height:75px;')) !!}
             
-                    <h4>{!! $result->title !!}
+                    {!! $result->title !!}
                     </h4>
-               
+                <div class="pull-right">
+                
+                </div>
+            </div>
+        </div>
+    </div>
 
     @endforeach
 </div>

@@ -35,6 +35,8 @@ Route::delete('delete/{id}', 'TilesCreateController@destroy');
 
 Route::post('search', 'WelcomeController@search');
 
+Route::get('plan', 'WelcomeController@plan');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

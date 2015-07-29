@@ -15,13 +15,8 @@
     
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKiwbzaIqNL3VwcuoSU_wOtwvsOXwHJMA&libraries=places"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   
     
-    <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
-
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -32,55 +27,75 @@
   </head>
 
   <body>
-      <nav class="navbar navbar-default">
-    <div class="container-fluid">
+  <span id="wrap">
+  
+  <!-- Fixed navbar -->
+  <div class="navbar">
+    <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle Navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Triplofi</a>
+        <a class="navbar-brand" href="#">Project name</a>
       </div>
-
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="{{ url('/home') }}">Home</a></li>
-        </ul>
+      <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="{{ url('/create_tile') }}">Create Another Tile</a></li>
-            <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-align-justify"></i><b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+            </ul>
+          </li>
         </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  
+  <!-- Begin page content -->
+  <div class="container">
+    <div class="page-header">
+      
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+        {!! Form::open(['url' => 'search']) !!}
+        <div class="input-group">
+        {!! Form::text('keyword', null, array('class' => 'form-control', 'placeholder' => 'Search...', 'required' => 'required')) !!}
+        <span class="input-group-btn">
+        <button type="submit" class="btn btn-info" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button> 
+                        </span> 
+                        </div>                  
+        
+        {!! Form::close() !!}
       </div>
-    </div>
-  </nav>
-<div class="container-fluid">
-  <div id="pics">
+      <div class="col-md-2"></div>
 
-  @foreach ($showTiles as $tile)
+    </span>
+    <div id="pics">
 
-    <div class="col-sm-2">
-      <a href="{{ url('/book', array('id' => $tile->id)) }}">
-        <h3>{{ $tile->title }}</h3>
-          {!! Html::image('uploads/' . $tile->id . '/' . $tile->img_sm, $tile->img_sm, array('class' => 'img-responsive img-thumbnail')) !!}</a></li>
-      </a>
-      {!! Form::open(['url' => 'delete/'. $tile->id, 'method' => 'delete']) !!}
-      {!! Form::submit('Delete', ['class' => 'delete-button btn btn-danger btn-sm btn-block', 'style' => 'margin: 10px 0']) !!}
-      {!! Form::close() !!}
-    </div>
+      @foreach ($showTiles as $tile)
 
-  @endforeach   
+        <div class="col-sm-4">
+          <a href="{{ url('/book', array('id' => $tile->id)) }}">
+            {!! Html::image('uploads/' . $tile->id . '/' . $tile->img_bg, $tile->img_bg, array('class' => 'img-responsive')) !!}</a></li>
+          </a>
+            <span class="circle-fad"></span>
+              <h3>{{ $tile->title }}</h3>
+                <p>{{ $tile->description }}<p>
+                  <button class="btn btn-default">View</button>
+        </div>
+      @endforeach   
+
 </div>
 </div>
-   <script src="{{ asset('/js/infinitescroll.js') }}"></script>
-
+  
  <script>
         $('.pager').hide();
         $('#pics').infinitescroll({
             navSelector     : ".pager",
             nextSelector    : ".pager a:last",
-            itemSelector    : ".col-sm-2",
+            itemSelector    : ".col-sm-4",
             debug           : false,
             dataType        : 'html',
             path: function(index) {
@@ -99,6 +114,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ asset('/js/infinitescroll.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
