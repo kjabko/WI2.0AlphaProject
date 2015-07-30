@@ -34,17 +34,11 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="{{ url('/') }}">Home</a></li>
-					<li><a href="{{ url('/plan') }}">Plan</a></li>
+					<li><a href="{{ url('/tiles_pub') }}">Plan</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
-						<li>{!! Form::open(['url' => 'search', 'class'=>'navbar-form navbar-right']) !!}
-          				<div class="form-group">
-            				{!! Form::text('keyword', null, array('class' => 'form-control', 'placeholder' => 'Find itenary tile', 'required' => 'required')) !!}
-          				</div>                   
-         				 <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Search</button>
-     						 {!! Form::close() !!}</li>
 						<li><a href="{{ url('/auth/login') }}">Login</a></li>
 						<li><a href="{{ url('/auth/register') }}">Register</a></li>
 					@else

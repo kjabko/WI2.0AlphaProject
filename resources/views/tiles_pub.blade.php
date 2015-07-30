@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,7 +40,7 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-align-justify"></i><b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
+              <li><a href="{{ url('/') }}">Home</a></li>
               <li><a href="#">Another action</a></li>
               <li><a href="#">Something else here</a></li>
             </ul>
@@ -75,17 +74,15 @@
     </span>
     <div id="pics">
 
-      @foreach ($search as $result)  
+      @foreach ($showTiles as $tile)
 
         <div class="col-sm-4">
-          <a href="{{ url('/book', array('id' => $result->id)) }}">
-                 
-                {!! Html::image('uploads/' . $result->id . '/' . $result->img_sm, $result->img_sm, array('class' => 'img-responsive','style'=>'width:100%;height:300px;margin-top:30px;')) !!}
-            
-                     </a>
+          <a href="{{ url('/book', array('id' => $tile->id)) }}">
+            {!! Html::image('uploads/' . $tile->id . '/' . $tile->img_bg, $tile->img_bg, array('class' => 'img-responsive','style'=>'height:300px;margin-top:30px;')) !!}</a></li>
+          </a>
             <span class="circle-fad"></span>
-              <h3>{!! $result->title !!}</h3>
-                <p>{!! $result->description !!}<p>
+              <h3>{{ $tile->title }}</h3>
+                <p>{{ $tile->description }}<p>
                   <button class="btn btn-default">View</button>
         </div>
       @endforeach   

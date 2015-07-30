@@ -54,11 +54,11 @@ class WelcomeController extends Controller {
         }
     }	
 
-    public function plan()
+    public function tiles_pub()
     {
     	$showTiles = Tile::paginate('9');
 
-        return view('plan', compact('showTiles'));
+        return view('tiles_pub', compact('showTiles'));
 
     }
 }
