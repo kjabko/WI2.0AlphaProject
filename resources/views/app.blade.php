@@ -7,7 +7,8 @@
 	<title>Alpha Project</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-
+	<link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
+  
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
@@ -19,47 +20,142 @@
 	<![endif]-->
 </head>
 <body>
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Alpha Project</a>
-			</div>
+	<div id="wrap">
+		<div id="back-image">
+			<nav class="navbar navbar-default">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="{{ url('/') }}">Alpha Project</a>
+					</div>
+						<ul class="nav navbar-nav navbar-right">
+							@if (Auth::guest())
+								<li><a href="{{ url('/auth/login') }}">Login</a></li>
+								<li><a>/</a><li>
+								<li><a href="{{ url('/auth/register') }}">Register</a></li>
+							@else
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+									<ul class="dropdown-menu" role="menu">
+										<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+									</ul>
+								</li>
+							@endif
+							<li class="dropdown">
+		            		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-align-justify"></i><b class="caret"></b></a>
+		            		<ul class="dropdown-menu">
+		              			<li><a href="{{ url('/tiles_pub') }}">Plan</a></li>
+		              			<li><a href="#">Another action</a></li>
+		              			<li><a href="#">Something else here</a></li>
+		            		</ul>
+		          			</li>
+						</ul>
+			</nav>
+			@yield('content')
+			<div class="container">
+				<div class="panel panel-dafault"  style="background-color: rgba(0,0,0,0.3)">
+					<div class="caption-1">
+              			<h1>Plan your perfect<br>trip in minutes</h1>
+             			 <h4>Find accommodation, transport and activities based<br>around what matters to you the most.</h4>
+             			 <a class="btn btn-lg btn-primary" href="#" role="button">Plan</a>
+          			</div>
+          		</div>
+          	</div>
+	          		<div id="explore-main-button">
+	          			<a class="btn btn-lg btn-default" href="#" role="button">Explore</a>
+	          			<h1>V</h1>
+	          		</div>
+		</div>	
+	</div>
+		<div class="featurette" id="sec2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="divider">
+								<div style="float:left;width:100px;">
+									<img src="http://localhost/wi2.0alphaproject/public/uploads/2compass.png">
+								</div>
+								<div style="float:left; width:80%;margin-top:-20px;">
+								    <h3>Discover</h3>
+								    <p>Easily discover new points of interest through<br>exploring by destination, category and keyword</p>
+								</div>
 
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li><a href="{{ url('/') }}">Home</a></li>
-					<li><a href="{{ url('/tiles_pub') }}">Plan</a></li>
-				</ul>
+							<div style="clear:both"></div>
+						</div>
+						<div class="divider">
+								<div style="float:left;width:100px;">
+									<img src="http://localhost/wi2.0alphaproject/public/uploads/rsz_share.png">
+								</div>
+								<div style="float:left; width:80%;margin-top:-20px;">
+								    <h3>Share</h3>
+								    <p>Share the places you love and the plans you have made<br>with travel companions, friends, or the whole world.</p>
+								</div>
 
-				<ul class="nav navbar-nav navbar-right">
-					@if (Auth::guest())
-						<li><a href="{{ url('/auth/login') }}">Login</a></li>
-						<li><a href="{{ url('/auth/register') }}">Register</a></li>
-					@else
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
-							</ul>
-						</li>
-					@endif
-				</ul>
-			</div>
-		</div>
-	</nav>
+							<div style="clear:both"></div>
+						</div>
+					</div>
 
-	@yield('content')
-		<div class="container">
-			<div class="content">
+					<div class="col-md-6">
+						<div class="divider">
+								<div style="float:left;width:100px;">
+									<img src="http://localhost/wi2.0alphaproject/public/uploads/rsz_create.png">
+								</div>
+								<div style="float:left; width:80%;margin-top:-20px;">
+								    <h3>Create</h3>
+								    <p>Create your own travel tiles based around<br>the points of interest you love</p>
+								</div>
 
-				
-			</div>
+							<div style="clear:both"></div>
+						</div>
+							<div class="divider">
+								<div style="float:left;width:100px;">
+									<img src="http://localhost/wi2.0alphaproject/public/uploads/rsz_yoga.png">
+								</div>
+								<div style="float:left; width:80%;margin-top:-20px;">
+								    <h3>Discover</h3>
+								    <p>Our visual experience gives you the confidence to know the<br>travel experience you booked are the right ones for you</p>
+								</div>
+
+							<div style="clear:both"></div>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+   		</div>
+
+<div id="pics">
+	<div class="container-fluid">
+	<h1>Explore</h1>
+      @foreach ($showTiles as $tile)
+
+        <div class="col-sm-3">
+          <a href="{{ url('/book', array('id' => $tile->id)) }}">
+            {!! Html::image('uploads/' . $tile->id . '/' . $tile->img_bg, $tile->img_bg, array('class' => 'img-responsive','style'=>'height:300px;margin-top:30px;')) !!}</a></li>
+          </a>
+            <span class="circle-fad"></span>
+              <h3>{{ $tile->title }}</h3>
+                <p>{{ $tile->description }}<p>
+                  <button class="btn btn-default">View</button>
+        </div>
+      @endforeach 
+  </div>
+</div>
+<br>
+
+<div id="main-button">
+	<a class="btn btn-lg btn-dafault" href="#" role="button">Get started now</a>
+</div>
+
+<div id="footer">
+      <div class="container-fluid">
+        <ul>
+        	<li><a href="#">About Us</a></li>
+        	<li><a href="#">User Agreement</a></li>
+        	<li><a href="#">Privacy Policy</a></li>
+        	<li><a href="#">Help</a></li>
+        </ul>
+      </div>
+</div>
+
 			<!-- Start of dsa Zendesk Widget script -->
 <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("//assets.zendesk.com/embeddable_framework/main.js","dsa.zendesk.com");/*]]>*/</script>
 <!-- End of dsa Zendesk Widget script -->

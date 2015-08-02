@@ -70,11 +70,11 @@
               <div id="files">
               </div>
                 <div class="form-group" id="form-buttons">
-                  <div class="checkbox" id="checkbox_1">
-                    <label>
+                  <!-- <div class="checkbox" id="checkbox_1">
+                   <label>
                      {!! Form::hidden('private', 0) !!}
                      {!! Form::checkbox('private', 1) !!} Check image(s) as private
-                    </label>
+                    </label>-->
                   </div>
                 </div>
               <div class="form-group">
@@ -88,6 +88,7 @@
     <div class="col-md-4">
                   <div id="map-canvas" style="margin-top:62px;">
                   </div>
+              <span class="tile_form">
               <div class="form-group">
                {!! Form::label('lat','Lat:') !!}
                {!! Form::text('lat', null, ['placeholder'=>'Latitude', 'class'=>'form-control', 'style'=>"margin-top:15px;"]) !!}
@@ -96,6 +97,8 @@
                {!! Form::label('lng', 'Lng:') !!}
                {!! Form::text('lng', null, ['placeholder'=>'Longitude', 'class'=>'form-control']) !!}
               </div>
+              </span>
+
     </div>
   </div>
     <div class="col-md-2">
@@ -115,7 +118,6 @@
       </ul>
     @endif
    </div> 
-
 
      
     <script>

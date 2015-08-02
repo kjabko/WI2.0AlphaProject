@@ -31,8 +31,10 @@ class WelcomeController extends Controller {
 	 */
 	
 	public function index()
-	{
-		return view('app');
+	{	
+		$showTiles = Tile::paginate('4');
+
+        return view('app', compact('showTiles'));
 	}
 
 	public function search()
@@ -60,5 +62,9 @@ class WelcomeController extends Controller {
 
         return view('tiles_pub', compact('showTiles'));
 
+    }
+    public function template()
+    {
+    	return view('template');
     }
 }

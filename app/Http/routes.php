@@ -37,6 +37,8 @@ Route::post('search', 'WelcomeController@search');
 
 Route::get('tiles_pub', 'WelcomeController@tiles_pub');
 
+Route::get('template', 'WelcomeController@template');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
