@@ -52,7 +52,7 @@ class TilesCreateController extends Controller {
 
                 // resize image
                 // And save as miniature
-                Image::make($destinationPath . '/' . $fileName)->resize(600, 600)->save($destinationPath . '/min_' . $fileName);
+                Image::make($destinationPath . '/' . $fileName)->resize(500, 500)->save($destinationPath . '/min_' . $fileName);
 
                 // Insert image information to database
                 Tile::insertTile($folderName, $fileName);

@@ -32,7 +32,7 @@ class WelcomeController extends Controller {
 	
 	public function index()
 	{	
-		$showTiles = Tile::paginate('4');
+		$showTiles = Tile::orderBy('created_at', 'desc')->paginate('3');
 
         return view('app', compact('showTiles'));
 	}
@@ -58,7 +58,7 @@ class WelcomeController extends Controller {
 
     public function tiles_pub()
     {
-    	$showTiles = Tile::paginate('9');
+    	$showTiles = Tile::orderBy('created_at', 'desc')->paginate('9');
 
         return view('tiles_pub', compact('showTiles'));
 

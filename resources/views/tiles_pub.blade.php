@@ -27,11 +27,12 @@
   </head>
 
   <body>
-  <span id="wrap">
+
+  <div id="search-back">
   
   <!-- Fixed navbar -->
   <div class="navbar">
-    <div class="container">
+    <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">Project name</a>
       </div>
@@ -52,44 +53,56 @@
   
   <!-- Begin page content -->
   <div class="container">
-    <div class="page-header">
-      
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-        {!! Form::open(['url' => 'search']) !!}
-        <div class="input-group">
-        {!! Form::text('keyword', null, array('class' => 'form-control', 'placeholder' => 'Search...', 'required' => 'required')) !!}
-        <span class="input-group-btn">
-        <button type="submit" class="btn btn-info" type="button">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button> 
-                        </span> 
-                        </div>                  
-        
-        {!! Form::close() !!}
-      </div>
-      <div class="col-md-2"></div>
-
-    </span>
-    <div id="pics">
-
-      @foreach ($showTiles as $tile)
-
-        <div class="col-sm-4">
-          <a href="{{ url('/book', array('id' => $tile->id)) }}">
-            {!! Html::image('uploads/' . $tile->id . '/' . $tile->img_bg, $tile->img_bg, array('class' => 'img-responsive','style'=>'height:300px;margin-top:30px;')) !!}</a></li>
-          </a>
-            <span class="circle-fad"></span>
-              <h3>{{ $tile->title }}</h3>
-                <p>{{ $tile->description }}<p>
-                  <button class="btn btn-default">View</button>
+        <div class="page-header">
+              <div class="row">
+                    
+                        
+                            {!! Form::open(['url' => 'search']) !!}
+                            <div class="input-group">
+                            {!! Form::text('keyword', null, array('class' => 'form-control', 'placeholder' => 'Search...', 'required' => 'required')) !!}
+                                <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info" type="button"><i class="glyphicon glyphicon-search"></i></button> 
+                                </span> 
+                            </div>
+                                         
+                    {!! Form::close() !!}
+              </div>
         </div>
-      @endforeach   
+  </div>
+      
+</div>
+<div class="divider"></div>
 
+
+<div class="container-fluid">
+        <div id="pics">
+
+          @foreach ($showTiles as $tile)
+
+            <div class="col-sm-4">
+               <a href="{{ url('/book', array('id' => $tile->id)) }}">
+                {!! Html::image('uploads/' . $tile->id . '/' . $tile->img_bg, $tile->img_bg, array('class' => 'img-responsive','style'=>'height:400px;width:100%;margin-top:30px;')) !!}</a></li>
+              </a>
+                <span class="circle-fad"></span>
+                  <h3>{{ $tile->title }}</h3>
+                    <p><p>
+                     <a href="{{ url('/book', array('id' => $tile->id)) }}">
+                      <button class="btn btn-default">View</button>
+                     </a>
+            </div>
+          @endforeach 
+        </div>
 </div>
+<div id="footer" style="margin-top:50px;background-color:#69A95F;">
+      <div class="container-fluid">
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">User Agreement</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
 </div>
-  
  <script>
         $('.pager').hide();
         $('#pics').infinitescroll({

@@ -104,9 +104,9 @@
     <div class="col-md-2">
     </div>
     <div class="col-md-4">
-            {!! Form::submit('Create tile', ['class' => 'btn btn-primary btn-lg btn-block']) !!}
+            {!! Form::submit('Create tile', ['class' => 'btn btn-primary btn-lg btn-block', 'style' => 'background-color:#69A95F;border-color:transparent;border-radius:0;']) !!}
 
-            {!! Form::reset('Reset', ['class' => 'btn btn-warning btn-block', 'id' => 'reset']) !!}
+            {!! Form::reset('Reset', ['class' => 'btn btn-warning btn-block', 'id' => 'reset', 'style' => 'border-radius:0;']) !!}
 
     {!! Form::close() !!}
 

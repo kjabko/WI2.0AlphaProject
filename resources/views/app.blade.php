@@ -51,7 +51,7 @@
 			</nav>
 			@yield('content')
 			<div class="container">
-				<div class="panel panel-dafault"  style="background-color: rgba(0,0,0,0.3)">
+				<div class="panel panel-dafault"  style="background-color: rgba(0,0,0,0.2)">
 					<div class="caption-1">
               			<h1>Plan your perfect<br>trip in minutes</h1>
              			 <h4>Find accommodation, transport and activities based<br>around what matters to you the most.</h4>
@@ -110,7 +110,7 @@
 									<img src="http://localhost/wi2.0alphaproject/public/uploads/rsz_yoga.png">
 								</div>
 								<div style="float:left; width:80%;margin-top:-20px;">
-								    <h3>Discover</h3>
+								    <h3>Relax</h3>
 								    <p>Our visual experience gives you the confidence to know the<br>travel experience you booked are the right ones for you</p>
 								</div>
 
@@ -127,14 +127,16 @@
 	<h1>Explore</h1>
       @foreach ($showTiles as $tile)
 
-        <div class="col-sm-3">
+        <div class="col-sm-4">
           <a href="{{ url('/book', array('id' => $tile->id)) }}">
-            {!! Html::image('uploads/' . $tile->id . '/' . $tile->img_bg, $tile->img_bg, array('class' => 'img-responsive','style'=>'height:300px;margin-top:30px;')) !!}</a></li>
+            {!! Html::image('uploads/' . $tile->id . '/' . $tile->img_bg, $tile->img_bg, array('class' => 'img-responsive','style'=>'height:400px;width:100%;margin-top:30px;')) !!}</a></li>
           </a>
             <span class="circle-fad"></span>
               <h3>{{ $tile->title }}</h3>
-                <p>{{ $tile->description }}<p>
+                <p><p>
+                 <a href="{{ url('/book', array('id' => $tile->id)) }}">
                   <button class="btn btn-default">View</button>
+                 </a>
         </div>
       @endforeach 
   </div>
@@ -144,7 +146,6 @@
 <div id="main-button">
 	<a class="btn btn-lg btn-dafault" href="#" role="button">Get started now</a>
 </div>
-
 <div id="footer">
       <div class="container-fluid">
         <ul>
@@ -156,9 +157,9 @@
       </div>
 </div>
 
-			<!-- Start of dsa Zendesk Widget script -->
-<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("//assets.zendesk.com/embeddable_framework/main.js","dsa.zendesk.com");/*]]>*/</script>
-<!-- End of dsa Zendesk Widget script -->
+			<!-- Start of triplofi Zendesk Widget script -->
+<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("//assets.zendesk.com/embeddable_framework/main.js","triplofi.zendesk.com");/*]]>*/</script>
+<!-- End of triplofi Zendesk Widget script -->
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>

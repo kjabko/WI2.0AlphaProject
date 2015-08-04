@@ -17,10 +17,6 @@
     <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKiwbzaIqNL3VwcuoSU_wOtwvsOXwHJMA&libraries=places"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  
-    
-    <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
 
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
    
@@ -32,60 +28,94 @@
   </head>
 
   <body>
-      <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle Navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Triplofi</a>
-      </div>
+<div class="container-fluid">
+  <div class="caption-2">
+    <a class="btn btn-lg btn-primary" href="#" role="button">Add to Itinerary</a>
+  </div>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="{{ url('/home') }}">Home</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="{{ url('/tiles') }}">Tiles</a></li>
-            <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
-        </ul>
-      </div>
+</div>
+<div class="container-fluid" id="img-col">
+  <div class="row">
+    <div class="col-md-6">
+        {!! Html::image('uploads/' . $userTile->id . '/' . $userTile->img_bg, $userTile->img_bg, array('class' => 'img-responsive', 'style' => 'height:480px;width:100%;')) !!}
     </div>
-  </nav>
+        <div class="col-md-3">
+              <img src="http://localhost/wi2.0alphaproject/public/uploads/dub1.jpg" class="img-responsive" style="height:240px;width:100%;">
+              <img src="http://localhost/wi2.0alphaproject/public/uploads/dub2.jpg" class="img-responsive" style="height:240px;width:100%;">
+         </div>
+        <div class="col-md-3">  
+              <img src="http://localhost/wi2.0alphaproject/public/uploads/dub3.jpg" class="img-responsive" style="height:240px;width:100%;">
+              <img src="http://localhost/wi2.0alphaproject/public/uploads/dub4.jpg" class="img-responsive" style="height:240px;width:100%;">
+       </div>
+</div>
+<div class="container">
+       <h1>{!! $userTile->title !!}</h1>
+       <br>
+       <p>{!! $userTile->description !!}</p>
+       <br>
+      <div id="three-buttons">
+          <a class="btn btn-lg btn-primary" href="#" role="button">buttonbutton</a>
+          <a class="btn btn-lg btn-primary" href="#" role="button">buttonbutton</a>
+          <a class="btn btn-lg btn-primary" href="#" role="button">buttonbutton</a>
+        </div>
 
+      <div id="review">
+        <div class="divider-1">
+              <h1>Review</h1>
+              <br>
+                <div style="float:left;width:150px;">
+                  <img src="http://localhost/wi2.0alphaproject/public/uploads/user.png" style="height:90px;width:90px;">
+                </div>
+                <div style="float:left; width:85%;margin-top:;">
+                    <p>Lorem ipsum dolor sit amet, nibh dicat viris per te, eam illum harum laudem te, scripta detraxit constituam sed ei. Ius brute minim verear cu. Te congue vidisse dolores pro, placerat salutatus maiestatis duo eu. Legere theophrastus an vel. Nam scripta fastidii no, an mei iusto adolescens moderatius.
+                    An modo omnes decore his, sed eu aliquip consetetur efficiantur. Nec quot fierent in, at duo quando repudiare, mei simul zril albucius ut. Posse doming omnesque ad sit. Everti facilisis similique per ut, no mea dicat errem elitr. Natum viris detracto sea ut.</p>
+                      <div style="float:left;width:60px;">
+                        <h4>Rating:</h4>
+                      </div>
+                      <div style="float:left; width:30%;">
+                      <img src="http://localhost/wi2.0alphaproject/public/uploads/stars.png" style="width:150px;height:35px;">
+                      5/5
+                    </div>
+                      <a class="btn btn-lg btn-primary" href="#" role="button">Add Review</a>
+                </div>
 
-{!! Html::image('uploads/' . $userTile->id . '/' . $userTile->img_bg, $userTile->img_bg, array('class' => 'img-responsive', 'style'=>'width:500px; height:400px;')) !!}
- 
- {!! $userTile->title !!}
- {!! $userTile->description !!}
+              <div style="clear:both"></div>
+            </div>
+      <div>
+      <div id="location-head">  
+        <h1>Location</h1>
+        <br>
+       <p>{!! $userTile->place !!}
+        <p>Tel: +87 9876 542123</p>
+        <p>www.bookyourholiday.com</p>
+      </div>
 
- <div id="map-canvas"></div>
+       <div id="map-size">
+          <div id="map-canvas"></div>
+      </div>
 
- <script>
- var lat = {!! $userTile->lat !!};
- var lng = {!! $userTile->lng !!};
+       <script>
+       var lat = {!! $userTile->lat !!};
+       var lng = {!! $userTile->lng !!};
 
- var map = new google.maps.Map(document.getElementById('map-canvas'),{
-  center:{
-    lat: lat,
-    lng: lng
-  },
-    zoom: 15
- });
+       var map = new google.maps.Map(document.getElementById('map-canvas'),{
+        center:{
+          lat: lat,
+          lng: lng
+        },
+          zoom: 15
+       });
 
- var marker = new google.maps.Marker({
-  position:{
-    lat:lat,
-    lng:lng
-  },
-  map:map
- });
- </script>
-
- 
+       var marker = new google.maps.Marker({
+        position:{
+          lat:lat,
+          lng:lng
+        },
+        map:map
+       });
+       </script>
+       <br><br><br>
+</div>
     
    
     <!-- Bootstrap core JavaScript
