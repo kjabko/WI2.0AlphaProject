@@ -2,17 +2,16 @@
 /*
  * Base structure
  */
-
-
-
 html,
 body {
   height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
-}
+  width: 100%;
+  font-family:Arial,sans-serif;
+  }
 
-/* Wrapper for page content to push down footer */
-#wrap {
+
+@media screen and (min-width : 1551px){
+  #wrap {
   min-height: 100%;
   height: auto !important;
   height: 100%;
@@ -22,6 +21,12 @@ body {
   padding: 0 0 60px;
 }
 
+.img-height
+{
+  height: 400px;
+  width: 100%;
+  margin-top: 30px;
+}
 /* Set the fixed height of the footer here */
 #footer {
   height: 60px;
@@ -89,10 +94,6 @@ ul
    font: bold 34px/55px Helvetica, Sans-Serif; 
    letter-spacing: -1px;
    text-align: center;
-   -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: black;
-    text-stroke-width: 0.5px;
-    text-stroke-color: black;
 }
 #pics p { 
    position: absolute; 
@@ -108,11 +109,11 @@ ul
   }
 #pics .circle-fad { 
    position: absolute; 
-   top: 23%; 
-   left: 20%; 
+   top: 20%; 
+   left: 110px; 
    border-radius: 180px;
-   width: 60%;
-   height: 60%;
+   width: 300px;
+   height: 300px;
    background: rgb(200, 255, 255); /* fallback color */
    background: rgba(0, 0, 0, 0.3);
 }
@@ -163,13 +164,6 @@ form
   clear: both;
 
 }
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-family:Arial,sans-serif;
-  }
 
 #wrap
 {
@@ -226,12 +220,12 @@ body {
 }
 .panel
  {
-  background-color: rgba(105, 169, 95, 0.6);
+  background-color: rgba(0,0,0,0.2);
   color: #fff;
  } 
 .panel-default>.panel-heading
  {
-  background-color: rgba(105, 169, 95, 0.6);
+  background-color: rgba(0,0,0,0.3);
   color: #fff;
  }
 .navbar-default > ul
@@ -292,18 +286,18 @@ body {
 
 .caption-1 h1
  {
-  font-size: 4em;
+  font-size: 5em;
   color: #fff;
   margin-top: 5%;
-  font-weight: 900;
+  font-weight: normal;
    
  } 
  .caption-1 h4
  {
-  font-size: 1.5em;
+  font-size: 2em;
   color: #fff;
   margin-top: 2%;
-  font-weight: 900;
+  font-weight: normal;
    
  }   
 .caption-1 .btn-lg
@@ -372,184 +366,2596 @@ body {
 {
   border-bottom: transparent;
 }
+
+#tiles-links .thumbnail 
+{
+  border: 0 none;
+  box-shadow: none;
+}
+#tiles-links img
+{
+  margin-top: 10%;
+}
+.tile-wide-1
+{
+  width: 100%;
+  height: 160px;
+  background-color: #0B3861;
+}
+.tile-wide-2
+{
+  width: 100%;
+  height: 160px;
+  background-color: #084B8A;
+}
+.tile-wide-3
+{
+  width: 100%;
+  height: 160px;
+  background-color: #045FB4;
+}
+.tile-wide-4
+{
+  width: 100%;
+  height: 160px;
+  background-color: #0174DF;
+}
+#search-bar .form-control
+{
+  height: 60px;
+}
+#search-bar .btn-info
+{
+  height: 60px;
+  width: 60px;
+}
+}
+/*
+############################################################################################################################################
+###############################################################################################################
+################################################################################
+########################################################
+*/
+
+@media screen and (min-width : 1401px) and (max-width : 1550px){
+  #wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+.img-height
+{
+  height: 400px;
+  width: 100%;
+  margin-top: 30px;
+}
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #2E2E2E;
+}
+#footer ul
+{
+  margin-top: 20px;
+}
+#footer li
+{
+  display: inline;
+  margin: 0 20px;
+}
+#footer a
+{
+  color:#fff;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+ 
+
+
+#map-canvas
+{
+  width: 100%;
+  height: 250px;
+  border:1px solid #000;
+}
+#map-size #map-canvas
+{
+  width: 100%;
+  height: 400px;
+  border:1px solid #000;
+}
+ul 
+{
+  list-style-type:none;
+}
+.image
+{
+  display: inline;
+}
+.tile_form label
+{
+  display: none;
+}
+
+#pic { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+#pics h3 { 
+   position: absolute; 
+   margin-left: -10px;
+   top: 140px; 
+   left: ;
+   width: 100%;
+   color: white; 
+   font: bold 34px/55px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+   text-align: center;
+}
+#pics p { 
+   position: absolute; 
+    margin-left: -6px;
+   top: 180px; 
+   left: ;
+   width: 100%;
+   color: white; 
+   font: normal 15px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+   text-align: center;
+
+  }
+#pics .circle-fad { 
+   position: absolute; 
+   top: 20%; 
+   left: 90px; 
+   border-radius: 180px;
+   width: 300px;
+   height: 300px;
+   background: rgb(200, 255, 255); /* fallback color */
+   background: rgba(0, 0, 0, 0.3);
+}
+circle-fad:hover
+{
+  background: rgb(200, 255, 255); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+}
+.btn-default
+{
+  position: absolute;
+  top: 60px;
+  margin-left: -55px;
+  background: transparent;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 0px;
+  width: 100px;
+  font: bold;
+  font-size: 1.5em;
+  border: 2px solid;
+}
+.btn-default:hover
+{
+  background: transparent;
+  color: #69A95F;
+  border: 2px solid #69A95F;
+}
+
+#wrap
+{
+  background-color: #5FB404;
+}
+form
+{
+  border-radius: 0px;
+}
+.main-icons
+{
+  float:left; 
+  width:70%;
+  clear:both
+}
+.main-text-icons
+{
+  float:left;
+  width:100px;
+  clear: both;
+
+}
+
+#wrap
+{
+  
+  background: url('http://localhost/wi2.0alphaproject/public/uploads/road.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+
+#back-image .navbar-default
+{
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-default .navbar-brand
+{
+  color: #fff;
+    font-size: 1.5em;
+}
+/* fix bs3 horizontal scrollbar bug */
+.row { margin: 0; padding: 0 }
+
+.caption-1 
+{
+  text-align: center;
+}
+#explore-main-button
+{
+  margin-top: 40px;
+}
+#explore-main-button .btn-lg
+{ 
+  position: relative;
+  font-size: 2em;
+  background-color: transparent;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: #fff;
+  font-weight: 500;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  color: #fff;
+}
+
+#explore-main-button h1
+{
+  position: relative;
+  text-align: center;
+  color: #fff;
+  margin-top: 70px;
+}
+.panel
+ {
+  background-color: rgba(0,0,0,0.2);
+  color: #fff;
+ } 
+.panel-default>.panel-heading
+ {
+  background-color: rgba(0,0,0,0.3);
+  color: #fff;
+ }
+.navbar-default > ul
+{
+  margin-right: 20px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 1.5em; 
+    padding-left: 0;
+}
+.divider
+{
+  margin-top: 50px;
+}
+.divider-1
+{
+  margin-top: 50px;
+}
+/*divider h3, p
+{
+  font-weight: 700;
+}*/
+.featurette {
+  background: #69A95F;
+  padding: 50px 0 90px;
+  margin-top: 50px;
+  color: #ffffff;
+}
+#pics h1
+{
+  text-align: center;
+  font-weight: 900;
+}
+#pics
+{
+  padding-bottom: 50px;
+}
+#main-button
+{
+  margin-bottom: 5%;
+}
+#main-button .btn-lg
+{
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 500;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  color: #fff;
+}
+
+.caption-1 h1
+ {
+  font-size: 5em;
+  color: #fff;
+  margin-top: 5%;
+  font-weight: normal;
+   
+ } 
+ .caption-1 h4
+ {
+  font-size: 2em;
+  color: #fff;
+  margin-top: 2%;
+  font-weight: normal;
+   
+ }   
+.caption-1 .btn-lg
+ {
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 900;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 12%;
+ }   
+.caption-2 .btn-lg
+ {
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 900;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 5%;
+  margin-right: 20px;
+  float:right;
+ }  
+.header h1 {
+  font-size:80px;
+  -webkit-text-stroke: 1px rgba(f,f,f,0.1);
+  color:#431a6d;
+  color:#fff;
+  margin-left:-5px;
+  margin-bottom:5px;
+  text-transform:uppercase;
+}
+#img-col .col-md-6, .col-md-3
+{
+  padding-left: 0;
+  padding-right: 0;
+}
+#three-buttons .btn-lg
+{
+  background-color: #E6E6E6;
+  color: #E6E6E6;
+  border-radius: 0;
+  border-color: #000;
+  height: 40px;
+}
+#review .btn-lg
+{
+  background-color: #69A95F;
+  border-color: transparent;
+  border-radius: 0;
+  float:right;
+  margin-top: 40px;
+  padding-left:30px;
+  padding-right:30px;
+}
+#search-back
+{
+  background-color: #69A95F;
+}
+.page-header
+{
+  border-bottom: transparent;
+}
+#tiles-links .thumbnail 
+{
+  border: 0 none;
+  box-shadow: none;
+}
+#tiles-links img
+{
+  margin-top: 10%;
+}
+.tile-wide-1
+{
+  width: 100%;
+  height: 160px;
+  background-color: #0B3861;
+}
+.tile-wide-2
+{
+  width: 100%;
+  height: 160px;
+  background-color: #084B8A;
+}
+.tile-wide-3
+{
+  width: 100%;
+  height: 160px;
+  background-color: #045FB4;
+}
+.tile-wide-4
+{
+  width: 100%;
+  height: 160px;
+  background-color: #0174DF;
+}
+#search-bar .form-control
+{
+  height: 60px;
+}
+#search-bar .btn-info
+{
+  height: 60px;
+  width: 60px;
+}
+}
+
+/*
+############################################################################################################################################
+###############################################################################################################
+################################################################################
+########################################################
+*/
+
+@media screen and (min-width : 1201px) and (max-width : 1400px){
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #2E2E2E;
+}
+#footer ul
+{
+  margin-top: 20px;
+}
+#footer li
+{
+  display: inline;
+  margin: 0 20px;
+}
+#footer a
+{
+  color:#fff;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+ 
+.img-height
+{
+  height: 300px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#map-canvas
+{
+  width: 100%;
+  height: 250px;
+  border:1px solid #000;
+}
+#map-size #map-canvas
+{
+  width: 100%;
+  height: 400px;
+  border:1px solid #000;
+}
+ul 
+{
+  list-style-type:none;
+}
+.image
+{
+  display: inline;
+}
+.tile_form label
+{
+  display: none;
+}
+
+#pic { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+#pics h3 { 
+   position: absolute; 
+   margin-left: -14px;
+   top: 110px; 
+   left: ;
+   width: 100%;
+   color: white; 
+   font: bold 34px/55px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+   text-align: center;
+   -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    text-stroke-width: 0.5px;
+    text-stroke-color: black;
+}
+#pics p { 
+   position: absolute; 
+    margin-left: -6px;
+   top: 180px; 
+   left: ;
+   width: 100%;
+   color: white; 
+   font: normal 15px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+   text-align: center;
+
+  }
+#pics .circle-fad { 
+   position: absolute; 
+   top: 20%; 
+   left: 20%; 
+   border-radius: 180px;
+   width: 250px;
+   height: 250px;
+   background: rgb(200, 255, 255); /* fallback color */
+   background: rgba(0, 0, 0, 0.3);
+}
+circle-fad:hover
+{
+  background: rgb(200, 255, 255); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+}
+.btn-default
+{
+  position: absolute;
+  top: 30px;
+  margin-left: -60px;
+  background: transparent;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 0px;
+  width: 100px;
+  font: bold;
+  font-size: 1.5em;
+  border: 2px solid;
+}
+.btn-default:hover
+{
+  background: transparent;
+  color: #69A95F;
+  border: 2px solid #69A95F;
+}
+
+#wrap
+{
+  background-color: #5FB404;
+}
+form
+{
+  border-radius: 0px;
+}
+.main-icons
+{
+  float:left; 
+  width:70%;
+  clear:both
+}
+.main-text-icons
+{
+  float:left;
+  width:100px;
+  clear: both;
+
+}
+
+#wrap
+{
+  
+  background: url('http://localhost/wi2.0alphaproject/public/uploads/road.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+
+#back-image .navbar-default
+{
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-default .navbar-brand
+{
+  color: #fff;
+    font-size: 1.5em;
+}
+/* fix bs3 horizontal scrollbar bug */
+.row { margin: 0; padding: 0 }
+
+.caption-1 
+{
+  text-align: center;
+}
+#explore-main-button
+{
+  margin-top: 40px;
+}
+#explore-main-button .btn-lg
+{ 
+  position: relative;
+  font-size: 2em;
+  background-color: transparent;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: #fff;
+  font-weight: 500;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  color: #fff;
+}
+
+#explore-main-button h1
+{
+  position: relative;
+  text-align: center;
+  color: #fff;
+  margin-top: 70px;
+}
+.panel
+ {
+  background-color: rgba(0,0,0,0.2);
+  color: #fff;
+ } 
+.panel-default>.panel-heading
+ {
+  background-color: rgba(0,0,0,0.3);
+  color: #fff;
+ }
+.navbar-default > ul
+{
+  margin-right: 20px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 1.5em; 
+    padding-left: 0;
+}
+.divider
+{
+  margin-top: 50px;
+}
+.divider-1
+{
+  margin-top: 50px;
+}
+/*divider h3, p
+{
+  font-weight: 700;
+}*/
+.featurette {
+  background: #69A95F;
+  padding: 50px 0 90px;
+  margin-top: 50px;
+  color: #ffffff;
+}
+#pics h1
+{
+  text-align: center;
+  font-weight: 900;
+}
+#pics
+{
+  padding-bottom: 50px;
+}
+#main-button
+{
+  margin-bottom: 5%;
+}
+#main-button .btn-lg
+{
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 500;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  color: #fff;
+}
+
+.caption-1 h1
+ {
+  font-size: 5em;
+  color: #fff;
+  margin-top: 5%;
+  font-weight: normal;
+   
+ } 
+ .caption-1 h4
+ {
+  font-size: 2em;
+  color: #fff;
+  margin-top: 2%;
+  font-weight: normal;
+   
+ }   
+.caption-1 .btn-lg
+ {
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 900;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 12%;
+ }   
+.caption-2 .btn-lg
+ {
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 900;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 5%;
+  margin-right: 20px;
+  float:right;
+ }  
+.header h1 {
+  font-size:80px;
+  -webkit-text-stroke: 1px rgba(f,f,f,0.1);
+  color:#431a6d;
+  color:#fff;
+  margin-left:-5px;
+  margin-bottom:5px;
+  text-transform:uppercase;
+}
+#img-col .col-md-6, .col-md-3
+{
+  padding-left: 0;
+  padding-right: 0;
+}
+#three-buttons .btn-lg
+{
+  background-color: #E6E6E6;
+  color: #E6E6E6;
+  border-radius: 0;
+  border-color: #000;
+  height: 40px;
+}
+#review .btn-lg
+{
+  background-color: #69A95F;
+  border-color: transparent;
+  border-radius: 0;
+  float:right;
+  margin-top: 40px;
+  padding-left:30px;
+  padding-right:30px;
+}
+#search-back
+{
+  background-color: #69A95F;
+}
+.page-header
+{
+  border-bottom: transparent;
+}
+#tiles-links .thumbnail 
+{
+  border: 0 none;
+  box-shadow: none;
+}
+#tiles-links img
+{
+  margin-top: 10%;
+}
+.tile-wide-1
+{
+  width: 100%;
+  height: 130px;
+  background-color: #0B3861;
+}
+.tile-wide-2
+{
+  width: 100%;
+  height: 130px;
+  background-color: #084B8A;
+}
+.tile-wide-3
+{
+  width: 100%;
+  height: 130px;
+  background-color: #045FB4;
+}
+.tile-wide-4
+{
+  width: 100%;
+  height: 130px;
+  background-color: #0174DF;
+}
+#search-bar .form-control
+{
+  height: 60px;
+}
+#search-bar .btn-info
+{
+  height: 60px;
+  width: 60px;
+}
+}
+
+/*
+############################################################################################################################################
+###############################################################################################################
+################################################################################
+########################################################
+*/
+
+@media screen and (min-width : 992px) and (max-width : 1200px){
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #2E2E2E;
+}
+#footer ul
+{
+  margin-top: 20px;
+}
+#footer li
+{
+  display: inline;
+  margin: 0 20px;
+}
+#footer a
+{
+  color:#fff;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+ 
+.img-height
+{
+  height: 250px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#map-canvas
+{
+  width: 100%;
+  height: 250px;
+  border:1px solid #000;
+}
+#map-size #map-canvas
+{
+  width: 100%;
+  height: 400px;
+  border:1px solid #000;
+}
+ul 
+{
+  list-style-type:none;
+}
+.image
+{
+  display: inline;
+}
+.tile_form label
+{
+  display: none;
+}
+
+#pic { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+#pics h3 { 
+   position: absolute; 
+   margin-left: -10px;
+   top: 80px; 
+   left: ;
+   width: 100%;
+   color: white; 
+   font: bold 32px/50px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+   text-align: center;
+   -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    text-stroke-width: 0.5px;
+    text-stroke-color: black;
+}
+#pics p { 
+   position: absolute; 
+    margin-left: -6px;
+   top: 180px; 
+   left: ;
+   width: 100%;
+   color: white; 
+   font: normal 15px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+   text-align: center;
+
+  }
+#pics .circle-fad { 
+   position: absolute; 
+   top: 21%; 
+   left: 22%; 
+   border-radius: 180px;
+   width: 200px;
+   height: 200px;
+   background: rgb(200, 255, 255); /* fallback color */
+   background: rgba(0, 0, 0, 0.3);
+}
+circle-fad:hover
+{
+  background: rgb(200, 255, 255); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+}
+.btn-default
+{
+  position: absolute;
+  top: ;
+  margin-left: -55px;
+  background: transparent;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 0px;
+  width: 100px;
+  font: bold;
+  font-size: 1em;
+  border: 2px solid;
+}
+.btn-default:hover
+{
+  background: transparent;
+  color: #69A95F;
+  border: 2px solid #69A95F;
+}
+
+#wrap
+{
+  background-color: #5FB404;
+}
+form
+{
+  border-radius: 0px;
+}
+.main-icons
+{
+  float:left; 
+  width:70%;
+  clear:both
+}
+.main-text-icons
+{
+  float:left;
+  width:100px;
+  clear: both;
+
+}
+
+#wrap
+{
+  
+  background: url('http://localhost/wi2.0alphaproject/public/uploads/road.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+
+#back-image .navbar-default
+{
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-default .navbar-brand
+{
+  color: #fff;
+    font-size: 1.5em;
+}
+/* fix bs3 horizontal scrollbar bug */
+.row { margin: 0; padding: 0 }
+
+.caption-1 
+{
+  text-align: center;
+}
+#explore-main-button
+{
+  margin-top: 40px;
+}
+#explore-main-button .btn-lg
+{ 
+  position: relative;
+  font-size: 2em;
+  background-color: transparent;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: #fff;
+  font-weight: 500;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  color: #fff;
+}
+
+#explore-main-button h1
+{
+  position: relative;
+  text-align: center;
+  color: #fff;
+  margin-top: 70px;
+}
+.panel
+ {
+  background-color: rgba(0,0,0,0.2);
+  color: #fff;
+ } 
+.panel-default>.panel-heading
+ {
+  background-color: rgba(0,0,0,0.3);
+  color: #fff;
+ }
+.navbar-default > ul
+{
+  margin-right: 20px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 1.5em; 
+    padding-left: 0;
+}
+.divider
+{
+  margin-top: 50px;
+}
+.divider-1
+{
+  margin-top: 50px;
+}
+/*divider h3, p
+{
+  font-weight: 700;
+}*/
+.featurette {
+  background: #69A95F;
+  padding: 50px 0 90px;
+  margin-top: 50px;
+  color: #ffffff;
+}
+#pics h1
+{
+  text-align: center;
+  font-weight: 900;
+}
+#pics
+{
+  padding-bottom: 50px;
+}
+#main-button
+{
+  margin-bottom: 5%;
+}
+#main-button .btn-lg
+{
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 500;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  color: #fff;
+}
+
+.caption-1 h1
+ {
+  font-size: 5em;
+  color: #fff;
+  margin-top: 5%;
+  font-weight: normal;
+   
+ } 
+ .caption-1 h4
+ {
+  font-size: 2em;
+  color: #fff;
+  margin-top: 2%;
+  font-weight: normal;
+   
+ }   
+.caption-1 .btn-lg
+ {
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 900;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 12%;
+ }   
+.caption-2 .btn-lg
+ {
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 900;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 5%;
+  margin-right: 20px;
+  float:right;
+ }  
+.header h1 {
+  font-size:80px;
+  -webkit-text-stroke: 1px rgba(f,f,f,0.1);
+  color:#431a6d;
+  color:#fff;
+  margin-left:-5px;
+  margin-bottom:5px;
+  text-transform:uppercase;
+}
+#img-col .col-md-6, .col-md-3
+{
+  padding-left: 0;
+  padding-right: 0;
+}
+#three-buttons .btn-lg
+{
+  background-color: #E6E6E6;
+  color: #E6E6E6;
+  border-radius: 0;
+  border-color: #000;
+  height: 40px;
+}
+#review .btn-lg
+{
+  background-color: #69A95F;
+  border-color: transparent;
+  border-radius: 0;
+  float:right;
+  margin-top: 40px;
+  padding-left:30px;
+  padding-right:30px;
+}
+#search-back
+{
+  background-color: #69A95F;
+}
+.page-header
+{
+  border-bottom: transparent;
+}
+#tiles-links .thumbnail 
+{
+  border: 0 none;
+  box-shadow: none;
+}
+#tiles-links img
+{
+  margin-top: 10%;
+}
+.tile-wide-1
+{
+  width: 100%;
+  height: 120px;
+  background-color: #0B3861;
+}
+.tile-wide-2
+{
+  width: 100%;
+  height: 120px;
+  background-color: #084B8A;
+}
+.tile-wide-3
+{
+  width: 100%;
+  height: 120px;
+  background-color: #045FB4;
+}
+.tile-wide-4
+{
+  width: 100%;
+  height: 120px;
+  background-color: #0174DF;
+}
+#search-bar .form-control
+{
+  height: 55px;
+}
+#search-bar .btn-info
+{
+  height: 55px;
+  width: 55px;
+}
+}
+
+/*
+############################################################################################################################################
+###############################################################################################################
+################################################################################
+########################################################
+*/
+
+@media screen and (min-width : 768px) and (max-width : 992px){
+
+  #wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #2E2E2E;
+}
+#footer ul
+{
+  margin-top: 20px;
+}
+#footer li
+{
+  display: inline;
+  margin: 0 20px;
+}
+#footer a
+{
+  color:#fff;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+ 
+.img-height
+{
+  height: 200px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+
+#map-canvas
+{
+  width: 100%;
+  height: 250px;
+  border:1px solid #000;
+}
+#map-size #map-canvas
+{
+  width: 100%;
+  height: 400px;
+  border:1px solid #000;
+}
+ul 
+{
+  list-style-type:none;
+}
+.image
+{
+  display: inline;
+}
+.tile_form label
+{
+  display: none;
+}
+
+#pic { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+#pics h3 { 
+   position: absolute; 
+   margin-left: -10px;
+   top: 60px; 
+   left: ;
+   width: 100%;
+   color: white; 
+   font: bold 20px/35px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+   text-align: center;
+   -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    text-stroke-width: 0.5px;
+    text-stroke-color: black;
+}
+#pics p { 
+   position: absolute; 
+    margin-left: -6px;
+   top: 180px; 
+   left: ;
+   width: 100%;
+   color: white; 
+   font: normal 15px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+   text-align: center;
+
+  }
+#pics .circle-fad { 
+   position: absolute; 
+   top: 23%; 
+   left: 22%; 
+   border-radius: 90px;
+   width: 160px;
+   height: 160px;
+   background: rgb(200, 255, 255); /* fallback color */
+   background: rgba(0, 0, 0, 0.3);
+}
+circle-fad:hover
+{
+  background: rgb(200, 255, 255); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+}
+.btn-default
+{
+  position: absolute;
+  top: -40px;
+  margin-left: -45px;
+  background: transparent;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 0px;
+  width: 80px;
+  font: bold;
+  font-size: 1em;
+  border: 2px solid;
+}
+.btn-default:hover
+{
+  background: transparent;
+  color: #69A95F;
+  border: 2px solid #69A95F;
+}
+
+#wrap
+{
+  background-color: #5FB404;
+}
+form
+{
+  border-radius: 0px;
+}
+.main-icons
+{
+  float:left; 
+  width:70%;
+  clear:both
+}
+.main-text-icons
+{
+  float:left;
+  width:100px;
+  clear: both;
+
+}
+
+#wrap
+{
+  
+  background: url('http://localhost/wi2.0alphaproject/public/uploads/road.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+
+#back-image .navbar-default
+{
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-default .navbar-brand
+{
+  color: #fff;
+    font-size: 1.5em;
+}
+/* fix bs3 horizontal scrollbar bug */
+.row { margin: 0; padding: 0 }
+
+.caption-1 
+{
+  text-align: center;
+}
+#explore-main-button
+{
+  margin-top: 40px;
+}
+#explore-main-button .btn-lg
+{ 
+  position: relative;
+  font-size: 2em;
+  background-color: transparent;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: #fff;
+  font-weight: 500;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  color: #fff;
+}
+
+#explore-main-button h1
+{
+  position: relative;
+  text-align: center;
+  color: #fff;
+  margin-top: 70px;
+}
+.panel
+ {
+  background-color: rgba(0,0,0,0.2);
+  color: #fff;
+ } 
+.panel-default>.panel-heading
+ {
+  background-color: rgba(0,0,0,0.3);
+  color: #fff;
+ }
+.navbar-default > ul
+{
+  margin-right: 20px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 1.5em; 
+    padding-left: 0;
+}
+.divider
+{
+  margin-top: 50px;
+}
+.divider-1
+{
+  margin-top: 50px;
+}
+/*divider h3, p
+{
+  font-weight: 700;
+}*/
+.featurette {
+  background: #69A95F;
+  padding: 50px 0 90px;
+  margin-top: 50px;
+  color: #ffffff;
+}
+#pics h1
+{
+  text-align: center;
+  font-weight: 900;
+}
+#pics
+{
+  padding-bottom: 50px;
+}
+#main-button
+{
+  margin-bottom: 5%;
+}
+#main-button .btn-lg
+{
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 500;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  color: #fff;
+}
+
+.caption-1 h1
+ {
+  font-size: 5em;
+  color: #fff;
+  margin-top: 5%;
+  font-weight: normal;
+   
+ } 
+ .caption-1 h4
+ {
+  font-size: 2em;
+  color: #fff;
+  margin-top: 2%;
+  font-weight: normal;
+   
+ }   
+.caption-1 .btn-lg
+ {
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 900;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 12%;
+ }   
+.caption-2 .btn-lg
+ {
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 900;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 5%;
+  margin-right: 20px;
+  float:right;
+ }  
+.header h1 {
+  font-size:80px;
+  -webkit-text-stroke: 1px rgba(f,f,f,0.1);
+  color:#431a6d;
+  color:#fff;
+  margin-left:-5px;
+  margin-bottom:5px;
+  text-transform:uppercase;
+}
+#img-col .col-md-6, .col-md-3
+{
+  padding-left: 0;
+  padding-right: 0;
+}
+#three-buttons .btn-lg
+{
+  background-color: #E6E6E6;
+  color: #E6E6E6;
+  border-radius: 0;
+  border-color: #000;
+  height: 40px;
+}
+#review .btn-lg
+{
+  background-color: #69A95F;
+  border-color: transparent;
+  border-radius: 0;
+  float:right;
+  margin-top: 40px;
+  padding-left:30px;
+  padding-right:30px;
+}
+#search-back
+{
+  background-color: #69A95F;
+}
+.page-header
+{
+  border-bottom: transparent;
+}
+#tiles-links .thumbnail 
+{
+  border: 0 none;
+  box-shadow: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#tiles-links img
+{
+  margin-top: 2%;
+}
+.tile-wide-1
+{
+  width: 100%;
+  height: 100px;
+  background-color: #0B3861;
+}
+.tile-wide-2
+{
+  width: 100%;
+  height: 100px;
+  background-color: #084B8A;
+}
+.tile-wide-3
+{
+  width: 100%;
+  height: 100px;
+  background-color: #045FB4;
+}
+.tile-wide-4
+{
+  width: 100%;
+  height: 100px;
+  background-color: #0174DF;
+}
+#search-bar .form-control
+{
+  height: 50px;
+}
+#search-bar .btn-info
+{
+  height: 50px;
+  width: 50px;
+}
+}
+
+/*
+############################################################################################################################################
+###############################################################################################################
+################################################################################
+########################################################
+*/
+
+@media screen and (min-width : 611px) and (max-width : 767px){
+
+  #wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #2E2E2E;
+}
+#footer ul
+{
+  margin-top: 20px;
+}
+#footer li
+{
+  display: inline;
+  margin: 0 20px;
+}
+#footer a
+{
+  color:#fff;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+ .img-height
+{
+  height: 400px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+
+
+#map-canvas
+{
+  width: 100%;
+  height: 250px;
+  border:1px solid #000;
+}
+#map-size #map-canvas
+{
+  width: 100%;
+  height: 400px;
+  border:1px solid #000;
+}
+ul 
+{
+  list-style-type:none;
+}
+.image
+{
+  display: inline;
+}
+.tile_form label
+{
+  display: none;
+}
+
+#pic { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+#pics h3 { 
+   position: absolute; 
+   margin-left: -10px;
+   top: 140px; 
+   left: ;
+   width: 100%;
+   color: white; 
+   font: bold 34px/55px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+   text-align: center;
+   -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    text-stroke-width: 0.5px;
+    text-stroke-color: black;
+}
+#pics p { 
+   position: absolute; 
+    margin-left: -6px;
+   top: 180px; 
+   left: ;
+   width: 100%;
+   color: white; 
+   font: normal 15px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+   text-align: center;
+
+  }
+#pics .circle-fad { 
+   position: absolute; 
+   top: 23%; 
+   left: 27%; 
+   border-radius: 150px;
+   width: 300px;
+   height: 300px;
+   background: rgb(200, 255, 255); /* fallback color */
+   background: rgba(0, 0, 0, 0.3);
+}
+circle-fad:hover
+{
+  background: rgb(200, 255, 255); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+}
+.btn-default
+{
+  position: absolute;
+  top: 80px;
+  margin-left: -55px;
+  background: transparent;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 0px;
+  width: 100px;
+  font: bold;
+  font-size: 1.5em;
+  border: 2px solid;
+}
+.btn-default:hover
+{
+  background: transparent;
+  color: #69A95F;
+  border: 2px solid #69A95F;
+}
+
+#wrap
+{
+  background-color: #5FB404;
+}
+form
+{
+  border-radius: 0px;
+}
+.main-icons
+{
+  float:left; 
+  width:70%;
+  clear:both
+}
+.main-text-icons
+{
+  float:left;
+  width:100px;
+  clear: both;
+
+}
+
+#wrap
+{
+  
+  background: url('http://localhost/wi2.0alphaproject/public/uploads/road.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+
+#back-image .navbar-default
+{
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-default .navbar-brand
+{
+  color: #fff;
+    font-size: 1.5em;
+}
+/* fix bs3 horizontal scrollbar bug */
+.row { margin: 0; padding: 0 }
+
+.caption-1 
+{
+  text-align: center;
+}
+#explore-main-button
+{
+  margin-top: 40px;
+}
+#explore-main-button .btn-lg
+{ 
+  position: relative;
+  font-size: 2em;
+  background-color: transparent;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: #fff;
+  font-weight: 500;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  color: #fff;
+}
+
+#explore-main-button h1
+{
+  position: relative;
+  text-align: center;
+  color: #fff;
+  margin-top: 70px;
+}
+.panel
+ {
+  background-color: rgba(0,0,0,0.2);
+  color: #fff;
+ } 
+.panel-default>.panel-heading
+ {
+  background-color: rgba(0,0,0,0.3);
+  color: #fff;
+ }
+.navbar-default > ul
+{
+  margin-right: 20px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 1.5em; 
+    padding-left: 0;
+}
+.divider
+{
+  margin-top: 50px;
+}
+.divider-1
+{
+  margin-top: 50px;
+}
+/*divider h3, p
+{
+  font-weight: 700;
+}*/
+.featurette {
+  background: #69A95F;
+  padding: 50px 0 90px;
+  margin-top: 50px;
+  color: #ffffff;
+}
+#pics h1
+{
+  text-align: center;
+  font-weight: 900;
+}
+#pics
+{
+  padding-bottom: 50px;
+}
+#main-button
+{
+  margin-bottom: 5%;
+}
+#main-button .btn-lg
+{
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 500;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  color: #fff;
+}
+
+.caption-1 h1
+ {
+  font-size: 4em;
+  color: #fff;
+  margin-top: 5%;
+  font-weight: normal;
+   
+ } 
+ .caption-1 h4
+ {
+  font-size: 1.5em;
+  color: #fff;
+  margin-top: 2%;
+  font-weight: normal;
+   
+ }   
+.caption-1 .btn-lg
+ {
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 900;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 12%;
+ }   
+.caption-2 .btn-lg
+ {
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 900;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 5%;
+  margin-right: 20px;
+  float:right;
+ }  
+.header h1 {
+  font-size:80px;
+  -webkit-text-stroke: 1px rgba(f,f,f,0.1);
+  color:#431a6d;
+  color:#fff;
+  margin-left:-5px;
+  margin-bottom:5px;
+  text-transform:uppercase;
+}
+#img-col .col-md-6, .col-md-3
+{
+  padding-left: 0;
+  padding-right: 0;
+}
+#three-buttons .btn-lg
+{
+  background-color: #E6E6E6;
+  color: #E6E6E6;
+  border-radius: 0;
+  border-color: #000;
+  height: 40px;
+}
+#review .btn-lg
+{
+  background-color: #69A95F;
+  border-color: transparent;
+  border-radius: 0;
+  float:right;
+  margin-top: 40px;
+  padding-left:30px;
+  padding-right:30px;
+}
+#search-back
+{
+  background-color: #69A95F;
+}
+.page-header
+{
+  border-bottom: transparent;
+}
+#tiles-links .thumbnail 
+{
+  border: 0 none;
+  box-shadow: none;
+}
+#tiles-links img
+{
+  margin-top: 10%;
+}
+.tile-wide-1
+{
+  width: 100%;
+  height: 160px;
+  background-color: #0B3861;
+}
+.tile-wide-2
+{
+  width: 100%;
+  height: 160px;
+  background-color: #084B8A;
+}
+.tile-wide-3
+{
+  width: 100%;
+  height: 160px;
+  background-color: #045FB4;
+}
+.tile-wide-4
+{
+  width: 100%;
+  height: 160px;
+  background-color: #0174DF;
+}
+#tiles-links .thumbnail 
+{
+  border: 0 none;
+  box-shadow: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#tiles-links img
+{
+  margin-top: 1%;
+}
+.tile-wide-1
+{
+  width: 100%;
+  height: 80px;
+  background-color: #0B3861;
+}
+.tile-wide-2
+{
+  width: 100%;
+  height: 80px;
+  background-color: #084B8A;
+}
+.tile-wide-3
+{
+  width: 100%;
+  height: 80px;
+  background-color: #045FB4;
+}
+.tile-wide-4
+{
+  width: 100%;
+  height: 80px;
+  background-color: #0174DF;
+}
+#search-bar .form-control
+{
+  height: 40px;
+}
+#search-bar .btn-info
+{
+  height: 40px;
+  width: 40px;
+}
+}
+/*
+#############################################################################################################################################
+############################################################################################################
+###############################################################################
+#################################################
+*/
+@media screen and (min-width : 240px) and (max-width : 610px){
+
+  #wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #2E2E2E;
+}
+#footer ul
+{
+  margin-top: 20px;
+}
+#footer li
+{
+  display: inline;
+  margin: 0 20px;
+}
+#footer a
+{
+  color:#fff;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+ .img-height
+{
+  height: 400px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+
+
+#map-canvas
+{
+  width: 100%;
+  height: 250px;
+  border:1px solid #000;
+}
+#map-size #map-canvas
+{
+  width: 100%;
+  height: 400px;
+  border:1px solid #000;
+}
+ul 
+{
+  list-style-type:none;
+}
+.image
+{
+  display: inline;
+}
+.tile_form label
+{
+  display: none;
+}
+
+#pic { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+#pics h3 { 
+   position: absolute; 
+   margin-left: -10px;
+   top: 140px; 
+   left: ;
+   width: 100%;
+   color: white; 
+   font: bold 34px/55px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+   text-align: center;
+   -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    text-stroke-width: 0.5px;
+    text-stroke-color: black;
+}
+#pics p { 
+   position: absolute; 
+    margin-left: -6px;
+   top: 180px; 
+   left: ;
+   width: 100%;
+   color: white; 
+   font: normal 15px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+   text-align: center;
+
+  }
+#pics .circle-fad { 
+   position: absolute; 
+   top: 23%; 
+   left: 22%; 
+   border-radius: 150px;
+   width: 300px;
+   height: 300px;
+   background: rgb(200, 255, 255); /* fallback color */
+   background: rgba(0, 0, 0, 0.3);
+}
+circle-fad:hover
+{
+  background: rgb(200, 255, 255); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+}
+.btn-default
+{
+  position: absolute;
+  top: 80px;
+  margin-left: -55px;
+  background: transparent;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 0px;
+  width: 100px;
+  font: bold;
+  font-size: 1.5em;
+  border: 2px solid;
+}
+.btn-default:hover
+{
+  background: transparent;
+  color: #69A95F;
+  border: 2px solid #69A95F;
+}
+
+#wrap
+{
+  background-color: #5FB404;
+}
+form
+{
+  border-radius: 0px;
+}
+.main-icons
+{
+  float:left; 
+  width:70%;
+  clear:both
+}
+.main-text-icons
+{
+  float:left;
+  width:100px;
+  clear: both;
+
+}
+
+#wrap
+{
+  
+  background: url('http://localhost/wi2.0alphaproject/public/uploads/road.png') center no-repeat;
+  background-size: 100% 100%;
+}
+
+
+#back-image .navbar-default
+{
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-default .navbar-brand
+{
+  color: #fff;
+    font-size: 1.5em;
+}
+/* fix bs3 horizontal scrollbar bug */
+.row { margin: 0; padding: 0 }
+
+.caption-1 
+{
+  text-align: center;
+}
+#explore-main-button
+{
+  margin-top: 40px;
+}
+#explore-main-button .btn-lg
+{ 
+  position: relative;
+  font-size: 2em;
+  background-color: transparent;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: #fff;
+  font-weight: 500;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  color: #fff;
+}
+
+#explore-main-button h1
+{
+  position: relative;
+  text-align: center;
+  color: #fff;
+  margin-top: 70px;
+}
+.panel
+ {
+  background-color: rgba(0,0,0,0.2);
+  color: #fff;
+ } 
+.panel-default>.panel-heading
+ {
+  background-color: rgba(0,0,0,0.3);
+  color: #fff;
+ }
+.navbar-default > ul
+{
+  margin-right: 20px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 1.5em; 
+    padding-left: 0;
+}
+.divider
+{
+  margin-top: 50px;
+}
+.divider-1
+{
+  margin-top: 50px;
+}
+/*divider h3, p
+{
+  font-weight: 700;
+}*/
+.featurette {
+  background: #69A95F;
+  padding: 50px 0 90px;
+  margin-top: 50px;
+  color: #ffffff;
+}
+#pics h1
+{
+  text-align: center;
+  font-weight: 900;
+}
+#pics
+{
+  padding-bottom: 50px;
+}
+#main-button
+{
+  margin-bottom: 5%;
+}
+#main-button .btn-lg
+{
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 500;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  color: #fff;
+}
+
+.caption-1 h1
+ {
+  font-size: 4em;
+  color: #fff;
+  margin-top: 5%;
+  font-weight: normal;
+   
+ } 
+ .caption-1 h4
+ {
+  font-size: 1.5em;
+  color: #fff;
+  margin-top: 2%;
+  font-weight: normal;
+   
+ }   
+.caption-1 .btn-lg
+ {
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 900;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 12%;
+ }   
+.caption-2 .btn-lg
+ {
+  font-size: 2em;
+  background-color: #69A95F;
+  margin-top: 2%;
+  border-radius: 0px;
+  border-color: transparent;
+  font-weight: 900;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 5%;
+  margin-right: 20px;
+  float:right;
+ }  
+.header h1 {
+  font-size:80px;
+  -webkit-text-stroke: 1px rgba(f,f,f,0.1);
+  color:#431a6d;
+  color:#fff;
+  margin-left:-5px;
+  margin-bottom:5px;
+  text-transform:uppercase;
+}
+#img-col .col-md-6, .col-md-3
+{
+  padding-left: 0;
+  padding-right: 0;
+}
+#three-buttons .btn-lg
+{
+  background-color: #E6E6E6;
+  color: #E6E6E6;
+  border-radius: 0;
+  border-color: #000;
+  height: 40px;
+}
+#review .btn-lg
+{
+  background-color: #69A95F;
+  border-color: transparent;
+  border-radius: 0;
+  float:right;
+  margin-top: 40px;
+  padding-left:30px;
+  padding-right:30px;
+}
+#search-back
+{
+  background-color: #69A95F;
+}
+.page-header
+{
+  border-bottom: transparent;
+}
+#tiles-links .thumbnail 
+{
+  border: 0 none;
+  box-shadow: none;
+}
+#tiles-links img
+{
+  margin-top: 10%;
+}
+.tile-wide-1
+{
+  width: 100%;
+  height: 160px;
+  background-color: #0B3861;
+}
+.tile-wide-2
+{
+  width: 100%;
+  height: 160px;
+  background-color: #084B8A;
+}
+.tile-wide-3
+{
+  width: 100%;
+  height: 160px;
+  background-color: #045FB4;
+}
+.tile-wide-4
+{
+  width: 100%;
+  height: 160px;
+  background-color: #0174DF;
+}
+#tiles-links .thumbnail 
+{
+  border: 0 none;
+  box-shadow: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#tiles-links img
+{
+  margin-top: 1%;
+}
+.tile-wide-1
+{
+  width: 100%;
+  height: 80px;
+  background-color: #0B3861;
+}
+.tile-wide-2
+{
+  width: 100%;
+  height: 80px;
+  background-color: #084B8A;
+}
+.tile-wide-3
+{
+  width: 100%;
+  height: 80px;
+  background-color: #045FB4;
+}
+.tile-wide-4
+{
+  width: 100%;
+  height: 80px;
+  background-color: #0174DF;
+}
+#search-bar .form-control
+{
+  height: 40px;
+}
+#search-bar .btn-info
+{
+  height: 40px;
+  width: 40px;
+}
+}
+
+
+
+
+
+
+
 /*
 ######################################################################################################################################################################
 ######################################################################################################################################################################
 */
 
-/* -- custom css for Bootstrap 3.x --*/
 
-/* move special fonts to HTML head for better performance */
-import url(http://fonts.googleapis.com/css?family=Voltaire);
-
-/* use special fonts in certain elements */
-/*h1,h2,h3,h4,.lead,.btn,.navbar a {
-  text-transform:uppercase;
-  ont-family:'Voltaire',Arial,sans
-  letter-spacing:2px }*/
-
-h1 {
-  font-size:50px;
-}
-
-/* make images gray */
-img.grayscale {
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
-}
-
-.icon-bar {
-   background-color:#fff;
-}
-
-.scroll-down a, .scroll-top a {
-   color:#ffffff;
-}
-
-.scroll-down {
-   position:fixed;
-   bottom:20%;
-   right:0%;
-   color:#f9f9f9;
-}
-
-.scroll-top {
-  background-color:#dbdbdb;
-}
-
-.vert {
-  vertical-align: middle;
-  width:100%;
-  padding-top:4%;
-  text-align:center;
-}
-
-.header .btn-lg {
-   font-size:28px;
-   border-color:#eeeeee;
-   padding:15px;
-   background-color:transparent;
-   color:#ffffff;
-}
-
-.header .btn-lg:hover {
-   background-color:#eeeeee;
-   color:#777777;
-}
-
-.navbar a {
-  color:#fff;
-  font-size:14px;
-}
-
-.navbar-bold.affix {
-  background-color:#d46054;
-}
-
-.navbar-bold {
-  background-color:#f68076;
-  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
-}
-
-.navbar-bold li a:hover, .navbar-bold li.active {
-  background-color:#d46054;
-}
-
- 
-.header .lead {
-  color:#d46054;
-  font-size:25px;
-}
-
-.header {
-  height: 80%;
-  background: #f68076 url('http://www.bootply.com/assets/example/pt_topo_l.png') repeat center center fixed;
-}
-
-/* use alt in navbar and header for different color */
-
-.alt {
-  background-color: #6E28C9;
-}
-
-.alt .lead {
-  color: #3B0496;
-}
-
-.alt.affix {
-  background-color:#4C06AB;
-}
-
-.alt li a:hover, .alt li.active {
-  background-color:#5D17BA;
-}
-
-
-
-.blurb {
-  padding: 120px 0;
-  background-color:#fefefe;
-}
-
-.blurb .panel {
-  background-color:transparent;
-}
-
-.bright {
-  background: #dbdbdb url('http://www.bootply.com/assets/example/pt_topo.png') repeat center center fixed; 
-  color:#777;
-}
-
-
-
-.featurette-item {
-  margin-bottom: 15px;
-}
-
-.featurette-item > i {
-  border: 3px solid #ffffff;
-  border-radius: 50%;
-  display: inline-block;
-  font-size: 56px;
-  width: 140px;
-  height: 140px;
-  line-height: 136px;
-  vertical-align: middle; 
-  text-align: center;
-}
-
-.featurette-item > i:hover {
-  font-size: 68px;
-}
-
-.callout {
-  color: #ffffff;
-  padding-top:7%;
-  height: 100%;
-  width: 100%;
-  background: url('http://www.bootply.com/assets/example/bg_suburb.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.gallery {
-  padding: 50px 0;
-}
-
-.call-to-action {
-  background: #eeeeee;
-  padding: 50px 0;
-}
-
-.call-to-action .btn {
-  margin: 10px;
-}
-
-footer {
-  padding: 100px 0;
-}
-
-/* -- end custom css for Bootstrap 3.x --*/

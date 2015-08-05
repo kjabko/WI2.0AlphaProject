@@ -39,6 +39,8 @@ Route::get('tiles_pub', 'WelcomeController@tiles_pub');
 
 Route::get('template', 'WelcomeController@template');
 
+Route::get('logint', 'WelcomeController@logintemplate');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

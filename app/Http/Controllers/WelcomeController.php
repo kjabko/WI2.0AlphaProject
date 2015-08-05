@@ -67,4 +67,9 @@ class WelcomeController extends Controller {
     {
     	return view('template');
     }
+
+    public function logintemplate()
+    {
+    	return view ('logintemp');
+    }
 }

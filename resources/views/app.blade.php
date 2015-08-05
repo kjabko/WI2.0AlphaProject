@@ -42,14 +42,11 @@
 							<li class="dropdown">
 		            		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-align-justify"></i><b class="caret"></b></a>
 		            		<ul class="dropdown-menu">
-		              			<li><a href="{{ url('/tiles_pub') }}">Plan</a></li>
-		              			<li><a href="#">Another action</a></li>
-		              			<li><a href="#">Something else here</a></li>
+		              			<li><a href="{{ url('/tiles_pub') }}">Search</a></li>
 		            		</ul>
 		          			</li>
 						</ul>
 			</nav>
-			@yield('content')
 			<div class="container">
 				<div class="panel panel-dafault"  style="background-color: rgba(0,0,0,0.2)">
 					<div class="caption-1">
@@ -73,7 +70,7 @@
 								<div style="float:left;width:100px;">
 									<img src="http://localhost/wi2.0alphaproject/public/uploads/2compass.png">
 								</div>
-								<div style="float:left; width:80%;margin-top:-20px;">
+								<div style="float:left; width:70%;margin-top:-20px;">
 								    <h3>Discover</h3>
 								    <p>Easily discover new points of interest through<br>exploring by destination, category and keyword</p>
 								</div>
@@ -84,7 +81,7 @@
 								<div style="float:left;width:100px;">
 									<img src="http://localhost/wi2.0alphaproject/public/uploads/rsz_share.png">
 								</div>
-								<div style="float:left; width:80%;margin-top:-20px;">
+								<div style="float:left; width70%;margin-top:-20px;">
 								    <h3>Share</h3>
 								    <p>Share the places you love and the plans you have made<br>with travel companions, friends, or the whole world.</p>
 								</div>
@@ -98,7 +95,7 @@
 								<div style="float:left;width:100px;">
 									<img src="http://localhost/wi2.0alphaproject/public/uploads/rsz_create.png">
 								</div>
-								<div style="float:left; width:80%;margin-top:-20px;">
+								<div style="float:left; width:70%;margin-top:-20px;">
 								    <h3>Create</h3>
 								    <p>Create your own travel tiles based around<br>the points of interest you love</p>
 								</div>
@@ -109,7 +106,7 @@
 								<div style="float:left;width:100px;">
 									<img src="http://localhost/wi2.0alphaproject/public/uploads/rsz_yoga.png">
 								</div>
-								<div style="float:left; width:80%;margin-top:-20px;">
+								<div style="float:left; width:70%;margin-top:-20px;">
 								    <h3>Relax</h3>
 								    <p>Our visual experience gives you the confidence to know the<br>travel experience you booked are the right ones for you</p>
 								</div>
@@ -129,7 +126,7 @@
 
         <div class="col-sm-4">
           <a href="{{ url('/book', array('id' => $tile->id)) }}">
-            {!! Html::image('uploads/' . $tile->id . '/' . $tile->img_bg, $tile->img_bg, array('class' => 'img-responsive','style'=>'height:400px;width:100%;margin-top:30px;')) !!}</a></li>
+            {!! Html::image('uploads/' . $tile->id . '/' . $tile->img_bg, $tile->img_bg, array('class' => 'img-responsive','class' => 'img-height')) !!}</a></li>
           </a>
             <span class="circle-fad"></span>
               <h3>{{ $tile->title }}</h3>

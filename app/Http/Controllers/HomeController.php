@@ -1,4 +1,5 @@
 <?php namespace App\Http\Controllers;
+use App\Tile;
 
 class HomeController extends Controller {
 
@@ -31,7 +32,8 @@ class HomeController extends Controller {
 	public function home()
 	{
 		$user = \Auth::user()->name;
+		$showTiles = Tile::orderBy('created_at', 'desc')->paginate('9');
 
-		return view('home')->with(compact('user'));
+		return view('home')->with(compact('user', 'showTiles'));
 	}
 }

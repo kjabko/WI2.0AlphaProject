@@ -12,16 +12,15 @@
     <title>Tile Create</title>
 
     <!-- Bootstrap core CSS -->
-    
+     
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/metro-bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKiwbzaIqNL3VwcuoSU_wOtwvsOXwHJMA&libraries=places"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   
     
-    <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
-
+    
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -30,30 +29,31 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-<body>
-  <nav class="navbar navbar-default">
+
+  <body>
+
+  <div id="search-back">
+  
+  <!-- Fixed navbar -->
+  <div class="navbar">
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle Navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Triplofi</a>
+        <a class="navbar-brand" href="#">Project name</a>
       </div>
-
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="{{ url('/home') }}">Home</a></li>
-        </ul>
+      <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="{{ url('/tiles') }}">My Tiles</a></li>
-            <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://localhost/wi2.0alphaproject/public/uploads/menu.png" style="height:40px;width:40px;"><b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ url('/home') }}">Home</a></li>
+    <li><a href="{{ url('/tiles') }}">Delete Tile</a></li>
+                  <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+            </ul>
+          </li>
         </ul>
-      </div>
+      </div><!--/.nav-collapse -->
     </div>
-  </nav>
+  </div>
 <!--################################################################################################################################
   ################################################################################################################################-->
   <div class="col-md-2">
