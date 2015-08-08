@@ -6,9 +6,12 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family:Arial,sans-serif;
+  font-family:Verdana;
   }
-
+p, h3, h4, h1
+{
+  font-family: verdana;
+}
 
 @media screen and (min-width : 1551px){
   #wrap {
@@ -30,7 +33,7 @@ body {
 /* Set the fixed height of the footer here */
 #footer {
   height: 60px;
-  background-color: #2E2E2E;
+  background-color: #5f85a9;
 }
 #footer ul
 {
@@ -91,7 +94,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: bold 34px/55px Helvetica, Sans-Serif; 
+   font: bold 34px/55px Verdana; 
    letter-spacing: -1px;
    text-align: center;
 }
@@ -102,7 +105,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: normal 15px Helvetica, Sans-Serif; 
+   font: normal 15px Verdana; 
    letter-spacing: -1px;
    text-align: center;
 
@@ -115,12 +118,12 @@ ul
    width: 300px;
    height: 300px;
    background: rgb(200, 255, 255); /* fallback color */
-   background: rgba(0, 0, 0, 0.3);
+   background: rgba(255, 255, 255, 0.3);
 }
 circle-fad:hover
 {
   background: rgb(200, 255, 255); /* fallback color */
-   background: rgba(0, 0, 0, 0.7);
+   background: rgba(255, 255, 255, 0.7);
 }
 .btn-default
 {
@@ -143,10 +146,6 @@ circle-fad:hover
   border: 2px solid #69A95F;
 }
 
-#wrap
-{
-  background-color: #5FB404;
-}
 form
 {
   border-radius: 0px;
@@ -168,10 +167,11 @@ form
 #wrap
 {
   
-  background: url('http://localhost/wi2.0alphaproject/public/uploads/road.png') center no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://localhost/wi2.0alphaproject/public/uploads/roadmountains.jpg') center no-repeat;
   background-size: 100% 100%;
-}
+  opacity: 2;
 
+}
 
 #back-image .navbar-default
 {
@@ -197,21 +197,23 @@ form
 #explore-main-button .btn-lg
 { 
   position: relative;
-  font-size: 2em;
+  font-size: 1.5em;
   background-color: transparent;
-  margin-top: 2%;
+  margin-top: -30px;
   border-radius: 0px;
   border-color: #fff;
   font-weight: 500;
-  padding-left: 55px;
-  padding-right: 55px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: -5px;
+  padding-bottom: -5px;
   margin-left: auto;
   margin-right: auto;
   display: table;
   color: #fff;
 }
 
-#explore-main-button h1
+#arrow 
 {
   position: relative;
   text-align: center;
@@ -286,19 +288,20 @@ form
 
 .caption-1 h1
  {
-  font-size: 5em;
+  font-size: 50px;
   color: #fff;
-  margin-top: 5%;
-  font-weight: normal;
+  margin-top: 10%;
+  font-weight: 900;
+  font-family: verdana;
    
  } 
  .caption-1 h4
  {
-  font-size: 2em;
+  font-size: 20px;
   color: #fff;
   margin-top: 2%;
   font-weight: normal;
-   
+  font-family: verdana;  
  }   
 .caption-1 .btn-lg
  {
@@ -437,7 +440,7 @@ form
 /* Set the fixed height of the footer here */
 #footer {
   height: 60px;
-  background-color: #2E2E2E;
+  background-color: #5f85a9;
 }
 #footer ul
 {
@@ -498,7 +501,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: bold 34px/55px Helvetica, Sans-Serif; 
+   font: bold 34px/55px Verdana; 
    letter-spacing: -1px;
    text-align: center;
 }
@@ -509,7 +512,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: normal 15px Helvetica, Sans-Serif; 
+   font: normal 15px Verdana; 
    letter-spacing: -1px;
    text-align: center;
 
@@ -522,7 +525,7 @@ ul
    width: 300px;
    height: 300px;
    background: rgb(200, 255, 255); /* fallback color */
-   background: rgba(0, 0, 0, 0.3);
+   background: rgba(255, 255, 255, 0.3);
 }
 circle-fad:hover
 {
@@ -550,10 +553,6 @@ circle-fad:hover
   border: 2px solid #69A95F;
 }
 
-#wrap
-{
-  background-color: #5FB404;
-}
 form
 {
   border-radius: 0px;
@@ -575,7 +574,7 @@ form
 #wrap
 {
   
-  background: url('http://localhost/wi2.0alphaproject/public/uploads/road.png') center no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://localhost/wi2.0alphaproject/public/uploads/roadmountains.jpg') center no-repeat;
   background-size: 100% 100%;
 }
 
@@ -604,21 +603,23 @@ form
 #explore-main-button .btn-lg
 { 
   position: relative;
-  font-size: 2em;
+  font-size: 1.5em;
   background-color: transparent;
-  margin-top: 2%;
+  margin-top: -30px;
   border-radius: 0px;
   border-color: #fff;
   font-weight: 500;
-  padding-left: 55px;
-  padding-right: 55px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: -5px;
+  padding-bottom: -5px;
   margin-left: auto;
   margin-right: auto;
   display: table;
   color: #fff;
 }
 
-#explore-main-button h1
+#arrow
 {
   position: relative;
   text-align: center;
@@ -693,18 +694,20 @@ form
 
 .caption-1 h1
  {
-  font-size: 5em;
+  font-size: 50px;
   color: #fff;
-  margin-top: 5%;
-  font-weight: normal;
+  margin-top: 10%;
+  font-weight: 900;
+  font-family: verdana;
    
  } 
  .caption-1 h4
  {
-  font-size: 2em;
+  font-size: 20px;
   color: #fff;
   margin-top: 2%;
   font-weight: normal;
+  font-family: verdana;
    
  }   
 .caption-1 .btn-lg
@@ -906,7 +909,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: bold 34px/55px Helvetica, Sans-Serif; 
+   font: bold 34px/55px Verdana; 
    letter-spacing: -1px;
    text-align: center;
    -webkit-text-stroke-width: 0.5px;
@@ -921,7 +924,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: normal 15px Helvetica, Sans-Serif; 
+   font: normal 15px Verdana; 
    letter-spacing: -1px;
    text-align: center;
 
@@ -934,7 +937,7 @@ ul
    width: 250px;
    height: 250px;
    background: rgb(200, 255, 255); /* fallback color */
-   background: rgba(0, 0, 0, 0.3);
+   background: rgba(255, 255, 255, 0.3);
 }
 circle-fad:hover
 {
@@ -962,10 +965,6 @@ circle-fad:hover
   border: 2px solid #69A95F;
 }
 
-#wrap
-{
-  background-color: #5FB404;
-}
 form
 {
   border-radius: 0px;
@@ -987,7 +986,7 @@ form
 #wrap
 {
   
-  background: url('http://localhost/wi2.0alphaproject/public/uploads/road.png') center no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://localhost/wi2.0alphaproject/public/uploads/roadmountains.jpg') center no-repeat;
   background-size: 100% 100%;
 }
 
@@ -1016,26 +1015,28 @@ form
 #explore-main-button .btn-lg
 { 
   position: relative;
-  font-size: 2em;
+  font-size: 1.5em;
   background-color: transparent;
-  margin-top: 2%;
+  margin-top: -30px;
   border-radius: 0px;
   border-color: #fff;
   font-weight: 500;
-  padding-left: 55px;
-  padding-right: 55px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: -5px;
+  padding-bottom: -5px;
   margin-left: auto;
   margin-right: auto;
   display: table;
   color: #fff;
 }
 
-#explore-main-button h1
+#arrow
 {
   position: relative;
   text-align: center;
   color: #fff;
-  margin-top: 70px;
+  margin-top: 40px;
 }
 .panel
  {
@@ -1105,18 +1106,20 @@ form
 
 .caption-1 h1
  {
-  font-size: 5em;
+  font-size: 50px;
   color: #fff;
-  margin-top: 5%;
-  font-weight: normal;
+  margin-top: 10%;
+  font-weight: 900;
+  font-family: verdana;
    
  } 
  .caption-1 h4
  {
-  font-size: 2em;
+  font-size: 20px;
   color: #fff;
   margin-top: 2%;
   font-weight: normal;
+  font-family: verdana;
    
  }   
 .caption-1 .btn-lg
@@ -1318,7 +1321,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: bold 32px/50px Helvetica, Sans-Serif; 
+   font: bold 32px/50px Verdana; 
    letter-spacing: -1px;
    text-align: center;
    -webkit-text-stroke-width: 0.5px;
@@ -1333,7 +1336,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: normal 15px Helvetica, Sans-Serif; 
+   font: normal 15px Verdana; 
    letter-spacing: -1px;
    text-align: center;
 
@@ -1346,7 +1349,7 @@ ul
    width: 200px;
    height: 200px;
    background: rgb(200, 255, 255); /* fallback color */
-   background: rgba(0, 0, 0, 0.3);
+   background: rgba(255, 255, 255, 0.3);
 }
 circle-fad:hover
 {
@@ -1374,10 +1377,6 @@ circle-fad:hover
   border: 2px solid #69A95F;
 }
 
-#wrap
-{
-  background-color: #5FB404;
-}
 form
 {
   border-radius: 0px;
@@ -1399,7 +1398,7 @@ form
 #wrap
 {
   
-  background: url('http://localhost/wi2.0alphaproject/public/uploads/road.png') center no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://localhost/wi2.0alphaproject/public/uploads/roadmountains.jpg') center no-repeat;
   background-size: 100% 100%;
 }
 
@@ -1428,26 +1427,28 @@ form
 #explore-main-button .btn-lg
 { 
   position: relative;
-  font-size: 2em;
+  font-size: 1.5em;
   background-color: transparent;
-  margin-top: 2%;
+  margin-top: -30px;
   border-radius: 0px;
   border-color: #fff;
   font-weight: 500;
-  padding-left: 55px;
-  padding-right: 55px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: -5px;
+  padding-bottom: -5px;
   margin-left: auto;
   margin-right: auto;
   display: table;
   color: #fff;
 }
 
-#explore-main-button h1
+#arrow
 {
   position: relative;
   text-align: center;
   color: #fff;
-  margin-top: 70px;
+  margin-top: 10px;
 }
 .panel
  {
@@ -1517,18 +1518,20 @@ form
 
 .caption-1 h1
  {
-  font-size: 5em;
+  font-size: 50px;
   color: #fff;
-  margin-top: 5%;
-  font-weight: normal;
+  margin-top: 10%;
+  font-weight: 900;
+  font-family: verdana;
    
  } 
  .caption-1 h4
  {
-  font-size: 2em;
+  font-size: 20px;
   color: #fff;
   margin-top: 2%;
   font-weight: normal;
+  font-family: verdana;
    
  }   
 .caption-1 .btn-lg
@@ -1730,7 +1733,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: bold 20px/35px Helvetica, Sans-Serif; 
+   font: bold 20px/35px Verdana; 
    letter-spacing: -1px;
    text-align: center;
    -webkit-text-stroke-width: 0.5px;
@@ -1745,7 +1748,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: normal 15px Helvetica, Sans-Serif; 
+   font: normal 15px Verdana; 
    letter-spacing: -1px;
    text-align: center;
 
@@ -1758,7 +1761,7 @@ ul
    width: 160px;
    height: 160px;
    background: rgb(200, 255, 255); /* fallback color */
-   background: rgba(0, 0, 0, 0.3);
+   background: rgba(255, 255, 255, 0.3);
 }
 circle-fad:hover
 {
@@ -1786,10 +1789,6 @@ circle-fad:hover
   border: 2px solid #69A95F;
 }
 
-#wrap
-{
-  background-color: #5FB404;
-}
 form
 {
   border-radius: 0px;
@@ -1811,7 +1810,7 @@ form
 #wrap
 {
   
-  background: url('http://localhost/wi2.0alphaproject/public/uploads/road.png') center no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://localhost/wi2.0alphaproject/public/uploads/roadmountains.jpg') center no-repeat;
   background-size: 100% 100%;
 }
 
@@ -1840,26 +1839,28 @@ form
 #explore-main-button .btn-lg
 { 
   position: relative;
-  font-size: 2em;
+  font-size: 1.5em;
   background-color: transparent;
-  margin-top: 2%;
+  margin-top: -30px;
   border-radius: 0px;
   border-color: #fff;
   font-weight: 500;
-  padding-left: 55px;
-  padding-right: 55px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: -5px;
+  padding-bottom: -5px;
   margin-left: auto;
   margin-right: auto;
   display: table;
   color: #fff;
 }
 
-#explore-main-button h1
+#arrow
 {
   position: relative;
   text-align: center;
   color: #fff;
-  margin-top: 70px;
+  margin-top: -20px;
 }
 .panel
  {
@@ -1929,18 +1930,20 @@ form
 
 .caption-1 h1
  {
-  font-size: 5em;
+  font-size: 50px;
   color: #fff;
-  margin-top: 5%;
-  font-weight: normal;
+  margin-top: 10%;
+  font-weight: 900;
+  font-family: verdana;
    
  } 
  .caption-1 h4
  {
-  font-size: 2em;
+  font-size: 20px;
   color: #fff;
   margin-top: 2%;
   font-weight: normal;
+  font-family: verdana;
    
  }   
 .caption-1 .btn-lg
@@ -2144,7 +2147,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: bold 34px/55px Helvetica, Sans-Serif; 
+   font: bold 34px/55px Verdana; 
    letter-spacing: -1px;
    text-align: center;
    -webkit-text-stroke-width: 0.5px;
@@ -2159,7 +2162,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: normal 15px Helvetica, Sans-Serif; 
+   font: normal 15px Verdana; 
    letter-spacing: -1px;
    text-align: center;
 
@@ -2172,7 +2175,7 @@ ul
    width: 300px;
    height: 300px;
    background: rgb(200, 255, 255); /* fallback color */
-   background: rgba(0, 0, 0, 0.3);
+   background: rgba(255, 255, 255, 0.3);
 }
 circle-fad:hover
 {
@@ -2200,10 +2203,6 @@ circle-fad:hover
   border: 2px solid #69A95F;
 }
 
-#wrap
-{
-  background-color: #5FB404;
-}
 form
 {
   border-radius: 0px;
@@ -2225,7 +2224,7 @@ form
 #wrap
 {
   
-  background: url('http://localhost/wi2.0alphaproject/public/uploads/road.png') center no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://localhost/wi2.0alphaproject/public/uploads/roadmountains.jpg') center no-repeat;
   background-size: 100% 100%;
 }
 
@@ -2254,26 +2253,28 @@ form
 #explore-main-button .btn-lg
 { 
   position: relative;
-  font-size: 2em;
+  font-size: 1.5em;
   background-color: transparent;
-  margin-top: 2%;
+  margin-top: -30px;
   border-radius: 0px;
   border-color: #fff;
   font-weight: 500;
-  padding-left: 55px;
-  padding-right: 55px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: -5px;
+  padding-bottom: -5px;
   margin-left: auto;
   margin-right: auto;
   display: table;
   color: #fff;
 }
 
-#explore-main-button h1
+#arrow
 {
   position: relative;
   text-align: center;
   color: #fff;
-  margin-top: 70px;
+  margin-top: 90px;
 }
 .panel
  {
@@ -2343,18 +2344,20 @@ form
 
 .caption-1 h1
  {
-  font-size: 4em;
+  font-size: 50px;
   color: #fff;
-  margin-top: 5%;
-  font-weight: normal;
+  margin-top: 10%;
+  font-weight: 900;
+  font-family: verdana;
    
  } 
  .caption-1 h4
  {
-  font-size: 1.5em;
+  font-size: 20px;
   color: #fff;
   margin-top: 2%;
   font-weight: normal;
+  font-family: verdana;
    
  }   
 .caption-1 .btn-lg
@@ -2589,7 +2592,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: bold 34px/55px Helvetica, Sans-Serif; 
+   font: bold 34px/55px Verdana; 
    letter-spacing: -1px;
    text-align: center;
    -webkit-text-stroke-width: 0.5px;
@@ -2604,7 +2607,7 @@ ul
    left: ;
    width: 100%;
    color: white; 
-   font: normal 15px Helvetica, Sans-Serif; 
+   font: normal 15px Verdana; 
    letter-spacing: -1px;
    text-align: center;
 
@@ -2617,7 +2620,7 @@ ul
    width: 300px;
    height: 300px;
    background: rgb(200, 255, 255); /* fallback color */
-   background: rgba(0, 0, 0, 0.3);
+   background: rgba(255, 255, 255, 0.3);
 }
 circle-fad:hover
 {
@@ -2645,10 +2648,6 @@ circle-fad:hover
   border: 2px solid #69A95F;
 }
 
-#wrap
-{
-  background-color: #5FB404;
-}
 form
 {
   border-radius: 0px;
@@ -2670,7 +2669,7 @@ form
 #wrap
 {
   
-  background: url('http://localhost/wi2.0alphaproject/public/uploads/road.png') center no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://localhost/wi2.0alphaproject/public/uploads/roadmountains.jpg') center no-repeat;
   background-size: 100% 100%;
 }
 
@@ -2699,21 +2698,23 @@ form
 #explore-main-button .btn-lg
 { 
   position: relative;
-  font-size: 2em;
+  font-size: 1.5em;
   background-color: transparent;
-  margin-top: 2%;
+  margin-top: -30px;
   border-radius: 0px;
   border-color: #fff;
   font-weight: 500;
-  padding-left: 55px;
-  padding-right: 55px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: -5px;
+  padding-bottom: -5px;
   margin-left: auto;
   margin-right: auto;
   display: table;
   color: #fff;
 }
 
-#explore-main-button h1
+#arrow
 {
   position: relative;
   text-align: center;
@@ -2788,18 +2789,20 @@ form
 
 .caption-1 h1
  {
-  font-size: 4em;
+  font-size: 50px;
   color: #fff;
-  margin-top: 5%;
-  font-weight: normal;
+  margin-top: 10%;
+  font-weight: 900;
+  font-family: verdana;
    
  } 
  .caption-1 h4
  {
-  font-size: 1.5em;
+  font-size: 20px;
   color: #fff;
   margin-top: 2%;
   font-weight: normal;
+  font-family: verdana;
    
  }   
 .caption-1 .btn-lg

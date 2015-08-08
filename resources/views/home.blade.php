@@ -35,16 +35,16 @@
   <div class="navbar">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Project name</a>
+        <a class="navbar-brand" href="#"><img src="http://localhost/wi2.0alphaproject/public/uploads/logo.png"></a>
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><h3 style="color:#fff;font-size:1.5em;margin-right:10px;">Welcome {!! $user !!}</h3></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://localhost/wi2.0alphaproject/public/uploads/menu.png" style="height:40px;width:40px;"><b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://localhost/wi2.0alphaproject/public/uploads/menu.png" style="height:30px;width:30px;"><b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="{{ url('/create_tile') }}">Create Tile</a></li>
-    <li><a href="{{ url('/tiles') }}">Delete Tile</a></li>
+                <li><a href="{{ url('/tiles') }}">Delete Tile</a></li>
                   <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
             </ul>
           </li>
@@ -58,7 +58,7 @@
         <div class="page-header">
               <div class="row">
                   <div id="search-bar">
-                            {!! Form::open(['url' => 'search']) !!}
+                            {!! Form::open(['url' => 'search_int']) !!}
                             <div class="input-group">
                             {!! Form::text('keyword', null, array('class' => 'form-control', 'placeholder' => 'Search...', 'required' => 'required')) !!}
                                 <span class="input-group-btn">
@@ -122,7 +122,7 @@
           @endforeach 
         </div>
 </div>
-<div id="footer" style="margin-top:50px;background-color:#0489B1;">
+<div id="footer" style="margin-top:50px;">
       <div class="container-fluid">
         <ul>
           <li><a href="#">About Us</a></li>

@@ -30,7 +30,7 @@
   <body>
 <div class="container-fluid">
   <div class="caption-2">
-    <a class="btn btn-lg btn-primary" href="#" role="button">Add to Itinerary</a>
+    <a class="btn btn-lg btn-primary" href="{{ url('/home') }}" role="button">Add to Itinerary</a>
   </div>
 
 </div>

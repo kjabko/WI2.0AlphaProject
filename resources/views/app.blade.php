@@ -8,9 +8,6 @@
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
-  
-	<!-- Fonts -->
-	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,14 +21,15 @@
 		<div id="back-image">
 			<nav class="navbar navbar-default">
 					<div class="navbar-header">
-						<a class="navbar-brand" href="{{ url('/') }}">Alpha Project</a>
+						<a class="navbar-brand" href="{{ url('/') }}"><img src="http://localhost/wi2.0alphaproject/public/uploads/logo.png">
+								</a>
 					</div>
 						<ul class="nav navbar-nav navbar-right">
 							@if (Auth::guest())
-								<li><a href="{{ url('/auth/login') }}">Login</a></li>
-								<li><a>/</a><li>
-								<li><a href="{{ url('/auth/register') }}">Register</a></li>
-							@else
+								<li style="margin-top:5px;"><a href="{{ url('/auth/login') }}">Login</a></li>
+								<li style="margin-top:5px;"><a>/</a><li>
+								<li style="margin-top:5px;"><a href="{{ url('/auth/register') }}">Register</a></li>
+							@else 
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 									<ul class="dropdown-menu" role="menu">
@@ -40,7 +38,7 @@
 								</li>
 							@endif
 							<li class="dropdown">
-		            		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-align-justify"></i><b class="caret"></b></a>
+		            		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://localhost/wi2.0alphaproject/public/uploads/menu.png" style="width:30px;height:30px;"><b class="caret"></b></a>
 		            		<ul class="dropdown-menu">
 		              			<li><a href="{{ url('/tiles_pub') }}">Search</a></li>
 		            		</ul>
@@ -48,7 +46,7 @@
 						</ul>
 			</nav>
 			<div class="container">
-				<div class="panel panel-dafault"  style="background-color: rgba(0,0,0,0.2)">
+				<div class="panel panel-dafault"  style="background-color: rgba(0,0,0,0.0)">
 					<div class="caption-1">
               			<h1>Plan your perfect<br>trip in minutes</h1>
              			 <h4>Find accommodation, transport and activities based<br>around what matters to you the most.</h4>
@@ -56,19 +54,20 @@
           			</div>
           		</div>
           	</div>
-	          		<div id="explore-main-button">
-	          			<a class="btn btn-lg btn-default" href="#" role="button">Explore</a>
-	          			<h1>V</h1>
+	          		<div id="explore-main-button" id="top-nav">
+	          			<a class="btn btn-lg btn-default" href="#green-section" role="button">Explore</a>
+	          			<div id='arrow'><img src="http://localhost/wi2.0alphaproject/public/uploads/arrow.png"></div>
 	          		</div>
 		</div>	
 	</div>
-		<div class="featurette" id="sec2">
+</div>
+		<div class="featurette" id="sec2" id="green-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
 						<div class="divider">
 								<div style="float:left;width:100px;">
-									<img src="http://localhost/wi2.0alphaproject/public/uploads/2compass.png">
+									<img src="http://localhost/wi2.0alphaproject/public/uploads/discoveryd.png">
 								</div>
 								<div style="float:left; width:70%;margin-top:-20px;">
 								    <h3>Discover</h3>
@@ -79,7 +78,7 @@
 						</div>
 						<div class="divider">
 								<div style="float:left;width:100px;">
-									<img src="http://localhost/wi2.0alphaproject/public/uploads/rsz_share.png">
+									<img src="http://localhost/wi2.0alphaproject/public/uploads/shared.png">
 								</div>
 								<div style="float:left; width70%;margin-top:-20px;">
 								    <h3>Share</h3>
@@ -93,7 +92,7 @@
 					<div class="col-md-6">
 						<div class="divider">
 								<div style="float:left;width:100px;">
-									<img src="http://localhost/wi2.0alphaproject/public/uploads/rsz_create.png">
+									<img src="http://localhost/wi2.0alphaproject/public/uploads/created.png">
 								</div>
 								<div style="float:left; width:70%;margin-top:-20px;">
 								    <h3>Create</h3>
@@ -104,11 +103,11 @@
 						</div>
 							<div class="divider">
 								<div style="float:left;width:100px;">
-									<img src="http://localhost/wi2.0alphaproject/public/uploads/rsz_yoga.png">
+									<img src="http://localhost/wi2.0alphaproject/public/uploads/relaxd.png">
 								</div>
 								<div style="float:left; width:70%;margin-top:-20px;">
 								    <h3>Relax</h3>
-								    <p>Our visual experience gives you the confidence to know the<br>travel experience you booked are the right ones for you</p>
+								    <p>Our visual experience gives you the confidence to<br>know thetravel experience you booked are the right ones</p>
 								</div>
 
 							<div style="clear:both"></div>
@@ -141,7 +140,7 @@
 <br>
 
 <div id="main-button">
-	<a class="btn btn-lg btn-dafault" href="#" role="button">Get started now</a>
+	<a class="btn btn-lg btn-dafault" href="{{ url('/tiles_pub') }}" role="button">Get started now</a>
 </div>
 <div id="footer">
       <div class="container-fluid">
@@ -154,11 +153,21 @@
       </div>
 </div>
 
+<script>
+ $('#top-nav').onePageNav({
+              currentClass: 'current',
+              changeHash: false,
+              scrollSpeed: 1200
+            });
+</script>
 			<!-- Start of triplofi Zendesk Widget script -->
 <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("//assets.zendesk.com/embeddable_framework/main.js","triplofi.zendesk.com");/*]]>*/</script>
 <!-- End of triplofi Zendesk Widget script -->
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<link href="{{ asset('/js/scroll.js') }}">
+	
+  
 </body>
 </html>

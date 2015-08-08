@@ -31,22 +31,22 @@
   </head>
 
   <body>
-
-  <div id="search-back">
+<div id="wrap" style="background:transparent;">
+  <div id="search-back" style="height:140px;">
   
   <!-- Fixed navbar -->
-  <div class="navbar">
+  <div class="navbar" style="height:140px;">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Project name</a>
+        <a class="navbar-brand" href="#"><img src="http://localhost/wi2.0alphaproject/public/uploads/logo.png"></a>
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://localhost/wi2.0alphaproject/public/uploads/menu.png" style="height:40px;width:40px;"><b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://localhost/wi2.0alphaproject/public/uploads/menu.png" style="height:30px;width:30px;"><b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="{{ url('/home') }}">Home</a></li>
-    <li><a href="{{ url('/tiles') }}">Delete Tile</a></li>
+                <li><a href="{{ url('/tiles') }}">Delete Tile</a></li>
                   <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
             </ul>
           </li>
@@ -56,19 +56,18 @@
   </div>
 <!--################################################################################################################################
   ################################################################################################################################-->
-  <div class="col-md-2">
-  </div>
-    <div class="col-md-4">
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-1"></div>
+     <div class="col-md-5">
             <h2>Create Tile</h2>
-    {!! Form::open(['url' => 'upload', 'method' => 'post', 'id' => 'upload-image', 'enctype' => 'multipart/form-data', 'files' => true]) !!}
+               {!! Form::open(['url' => 'upload', 'method' => 'post', 'id' => 'upload-image', 'enctype' => 'multipart/form-data', 'files' => true]) !!}
             <div class="form-group">
-              
               {!! Form::text('title', null, ['placeholder'=>'Tile name', 'class'=>'form-control']) !!}
             </div>
             <div class="form-group">
               {!! Form::file('file[]', ['multiple' => 'multiple', 'id' => 'multiple-files', 'accept' => 'image/*']) !!}
-              <div id="files">
-              </div>
+              <div id="files"></div>
                 <div class="form-group" id="form-buttons">
                   <!-- <div class="checkbox" id="checkbox_1">
                    <label>
@@ -83,31 +82,21 @@
               <div class="form-group">
                {!! Form::textarea('description', null, ['placeholder'=>'Description', 'class'=>'form-control']) !!}
               </div>
-    </div>
-    </div>
-    <div class="col-md-4">
-                  <div id="map-canvas" style="margin-top:62px;">
-                  </div>
-              <span class="tile_form">
-              <div class="form-group">
-               {!! Form::label('lat','Lat:') !!}
-               {!! Form::text('lat', null, ['placeholder'=>'Latitude', 'class'=>'form-control', 'style'=>"margin-top:15px;"]) !!}
-              </div>
-              <div class="form-group">
-               {!! Form::label('lng', 'Lng:') !!}
-               {!! Form::text('lng', null, ['placeholder'=>'Longitude', 'class'=>'form-control']) !!}
-              </div>
-              </span>
-
-    </div>
-  </div>
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-4">
+      </div>
+      <div class="col-md-5">
+                  <div id="map-canvas" style="margin-top:62px;"></div>
+                    <span class="tile_form">
+                    <div class="form-group">
+                     {!! Form::label('lat','Lat:') !!}
+                     {!! Form::text('lat', null, ['placeholder'=>'Latitude', 'class'=>'form-control', 'style'=>"margin-top:15px;"]) !!}
+                    </div>
+                    <div class="form-group">
+                     {!! Form::label('lng', 'Lng:') !!}
+                     {!! Form::text('lng', null, ['placeholder'=>'Longitude', 'class'=>'form-control']) !!}
+                    </div>
+                    </span>
+       
             {!! Form::submit('Create tile', ['class' => 'btn btn-primary btn-lg btn-block', 'style' => 'background-color:#69A95F;border-color:transparent;border-radius:0;']) !!}
-
-            {!! Form::reset('Reset', ['class' => 'btn btn-warning btn-block', 'id' => 'reset', 'style' => 'border-radius:0;']) !!}
-
     {!! Form::close() !!}
 
     @if ($errors->any())
@@ -117,7 +106,9 @@
           @endforeach
       </ul>
     @endif
-   </div> 
+   </div>
+    </div>
+  </div>
 
      
     <script>
@@ -162,7 +153,20 @@
           $('#lng').val(lng);
         });
   </script>
-    <div class="col-md-4"></div>
+      <div class="col-md-1">
+    </div>
+  </div>
+</div>
+  <div id="footer">
+      <div class="container-fluid">
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">User Agreement</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+</div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

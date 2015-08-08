@@ -12,11 +12,11 @@
     <title>Tile Create</title>
 
     <!-- Bootstrap core CSS -->
-     
+    
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/metro-bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
-    
+  
     
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
    
@@ -35,14 +35,16 @@
   <div class="navbar">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#"><img src="http://localhost/wi2.0alphaproject/public/uploads/logo.png"></a>
+        <a class="navbar-brand" href="{{ url('/home') }}"><img src="http://localhost/wi2.0alphaproject/public/uploads/logo.png"></a>
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://localhost/wi2.0alphaproject/public/uploads/menu.png" style="height:30px;width:30px;"><b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="{{ url('/') }}">Home</a></li>
+              <li><a href="{{ url('/create_tile') }}">Create Tile</a></li>
+               <li><a href="{{ url('/tiles') }}">Delete Tile</a></li>
+                  <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
             </ul>
           </li>
         </ul>
@@ -54,22 +56,21 @@
   <div class="container">
         <div class="page-header">
               <div class="row">
-                  <div id="search-bar">
-                            {!! Form::open(['url' => 'search']) !!}
+                        <div id="search-bar">
+                            {!! Form::open(['url' => 'search_int']) !!}
                             <div class="input-group">
                             {!! Form::text('keyword', null, array('class' => 'form-control', 'placeholder' => 'Search...', 'required' => 'required')) !!}
                                 <span class="input-group-btn">
                                 <button type="submit" class="btn btn-info" type="button"><i class="glyphicon glyphicon-search"></i></button> 
                                 </span> 
-                            </div>           
+                            </div>
+                         </div>                
                     {!! Form::close() !!}
-                  </div>
               </div>
         </div>
   </div>
       
 </div>
-
 <div id="tiles-links">
   <div class="row">
       <div class="col-md-3">
@@ -95,28 +96,26 @@
   </div>
 </div>
 
+
 <div class="container-fluid">
         <div id="pics">
 
-          @foreach ($showTiles as $tile)
+          @foreach ($search as $result)  
 
-            <div class="col-sm-4">
-               <a href="{{ url('/book', array('id' => $tile->id)) }}">
-                {!! Html::image('uploads/' . $tile->id . '/' . $tile->img_bg, $tile->img_bg, array('class' => 'img-responsive', 'class' => 'img-height')) !!}</a></li>
-              </a>
-                <span class="circle-fad"></span>
-                 <h3>{!!$tile->title!!}</h3>
-
-                 <?php 
-                 //$splitWords = $tile->title;
-                 //$splitWords = explode(" ", $splitWords);
-                  //for($i = 0; $i < count($splitWords); $i++){echo '<h3>'. $splitWords[$i]. "<br></h3>";} ?>
-                    <p><p>
-                     <a href="{{ url('/book', array('id' => $tile->id)) }}">
-                      <button class="btn btn-default">View</button>
+        <div class="col-sm-4">
+          <a href="{{ url('/book', array('id' => $result->id)) }}">
+                 
+                {!! Html::image('uploads/' . $result->id . '/' . $result->img_sm, $result->img_sm, array('class' => 'img-responsive','class' => 'img-height')) !!}
+            
                      </a>
-            </div>
-          @endforeach 
+            <span class="circle-fad"></span>
+              <h3>{!! $result->title !!}</h3>
+                <p>
+                <a href="{{ url('/book', array('id' => $result->id)) }}">
+                  <button class="btn btn-default">View</button>
+                </a>
+        </div>
+      @endforeach   
         </div>
 </div>
 <div id="footer" style="margin-top:50px;background-color:#0489B1;">
@@ -159,3 +158,5 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>
+
+

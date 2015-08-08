@@ -35,7 +35,7 @@
   <div class="navbar">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Project name</a>
+        <a class="navbar-brand" href="#"><img src="http://localhost/wi2.0alphaproject/public/uploads/logo.png"></a>
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">

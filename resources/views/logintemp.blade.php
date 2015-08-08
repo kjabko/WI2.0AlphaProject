@@ -24,7 +24,7 @@
 		<div id="back-image">
 			<nav class="navbar navbar-default">
 					<div class="navbar-header">
-						<a class="navbar-brand" href="{{ url('/') }}">Alpha Project</a>
+						<a class="navbar-brand" href="{{ url('/') }}"><img src="http://localhost/wi2.0alphaproject/public/uploads/logo.png"></a>
 					</div>
 						<ul class="nav navbar-nav navbar-right">
 							@if (Auth::guest())

@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 use App\Tile;
+use DB;
+use Request;
 
 class HomeController extends Controller {
 
@@ -32,8 +34,27 @@ class HomeController extends Controller {
 	public function home()
 	{
 		$user = \Auth::user()->name;
-		$showTiles = Tile::orderBy('created_at', 'desc')->paginate('9');
+		$showTiles = Tile::orderBy('created_at', 'desc')->paginate('20');
 
 		return view('home')->with(compact('user', 'showTiles'));
 	}
+
+	public function search_int()
+	{
+		$input = Request::input('keyword');
+
+
+		$search  = DB::table('tile')->where('title', 'LIKE', '%'.$input.'%')
+                    ->orWhere('place','LIKE', '%'.$input.'%')
+                    ->get();
+
+        if (!empty($search))
+        {
+        	return view('search_int', compact('search'));
+        }   
+        else 
+        {
+        	return '<h3>Sorry, No results for '. $input .'</h3>';
+        }
+    }	
 }
